@@ -50,14 +50,13 @@ enable_katex:       true
 # Collections
 # -----------------------------------------------------------------------------
 collections:
+  portfolio:
+    output: true
   news:
     defaults:
       layout: post
     output: true
     permalink: /news/:path/
-  projects:
-    output: true
-    permalink: /viz/:path/
 
 news_limit: 5
 

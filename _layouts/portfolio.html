@@ -1,0 +1,39 @@
+<!-- This is essentially a copy of the default layout but makes it easier to deal
+with porting in another theme.
+
+I hacked together bits of CSS/html from the `freelancer-theme` github. I'm not exactly sure why I need a root directory named portfolio for this to work.
+ -->
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+  
+  <body>
+    {% include header.html %}
+
+    {% include portfolio_grid.html %}
+
+    {% include modals.html %}
+
+    {% include js.html %}
+
+
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl | prepend: site.url }}">
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+
+    {% include footer.html %}
+
+    {% include hemline.html %}
+
+  </body>
+
+</html>
+
+

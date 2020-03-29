@@ -60,12 +60,12 @@ __UNC Institute of Marine Sciences__ NSF REU Scholar, Coastal Fisheries Ecology 
 `2020`
 __Brady, RX__, NS Lovenduski, SG Yeager, MC Long, and K Lindsay (2020), Skillful multiyear predictions of ocean acidification in the California Current System, _Nature Communications_. [[Preprint]](/papers/Brady2020.pdf) [[Supplemental]](/papers/Brady2020Supplemental.pdf)
 
+### Peer-Reviewed
 `2020`
 Elsworth, GE, NS Lovenduski, KA McKinnon, KM Krumhardt, and __RX Brady__ (2020), Finding
 the fingerprint of anthropogenic climate change in marine phytoplankton abundance,
-_Current Climate Change Reports_.
+_Current Climate Change Reports_. DOI: [10.1007/s40641-020-00156-w](https://link.springer.com/article/10.1007/s40641-020-00156-w). [[Online]](https://link.springer.com/article/10.1007/s40641-020-00156-w)
 
-### Peer-Reviewed
 `2019`
 __Brady, RX__, NS Lovenduski, MA Alexander, M Jacox, and N Gruber (2019), On the role of climate modes in modulating the air-sea CO2 fluxes in eastern boundary upwelling systems, _Biogeosciences_, 16, 329–346, DOI: [10.5194/bg-16-329-2019](https://www.biogeosciences.net/16/329/2019/). [[PDF]](/papers/Brady2019a.pdf) [[Supplemental]](/papers/Brady2019aSupplemental.pdf) [[Online]](https://www.biogeosciences.net/16/329/2019/)
 
@@ -184,7 +184,7 @@ Runner-up, Data Visualization and Storytelling Competition, American Geophysical
 `2019` 
 Programming Mentor, Holly Olivarez (SOARS; University of New Mexico)
 
-Programming Mentor, David Feagins (SMART; St. Mary's College) 
+Programming Mentor, David Feagins (SMART; St. Mary's University) 
 
 Programming Mentor, Gabriela Cazares (SOARS; MIT)
 
@@ -193,34 +193,39 @@ Programming Mentor, Brianna Green (RESESS; New Mexico Tech)
 `2017` 
 Programming Mentor, Gabriela Negrete-Garcia (SOARS; University of Wisconsin--Madison)
 
-### Science Fair Judging
-
-`2019`
-Boulder Valley School District Science Fair
-
-`2017`
-SOARS Poster Conference
-
 ### Miscellaneous
 
-`2018-present`
+`2020`
+Co-Organizer, Eastern Pacific Ocean Conference (Mount Hood, OR)
+
+`2020`
+Trout Bowl Science Judge (Boulder, CO)
+
+`2019`
+Boulder Valley School District Science Fair Judge (Boulder, CO)
+
+`2018-2019`
 Skype a Scientist (video calls with high school science classes)
 
 `2018-2019`
 Contributor, Climate Gamers [[Ice Ages]](https://www.youtube.com/watch?v=1IF5I7RR6u0) [[Climate Models]](https://www.youtube.com/watch?v=iJOw9ZtCRZI)
 
 `2017-2019`
-Committee Lead, oceanography faculty search; prospective students; mentorship
+Graduate Committee Lead, oceanography faculty search; prospective students; mentorship
+
+`2017`
+SOARS Poster Conference Judge (Boulder, CO)
 
 `2013-2016`
 Ambassador, Office of Fellowships; Office of Undergraduate Research; Sustainable Carolina
 
 ### Peer Reviewer
 
-*JGR: Oceans* (x2)
-
 *Earth System Science Data*
 
+*JGR: Oceans* (x2)
+
+*Journal of Open Source Software*
 
 ## Teaching
 
@@ -251,8 +256,13 @@ Guest Lecturer, _Intro to Scientific Computing for Earth Sciences_ (Color Theory
 ## Presentations
 
 ### Invited Talks
+`2020`
+_Effective Use of Color in Scientific Visualization_. Colorado State University. (Fort Collins, CO)
+
 `2019`
-_High resolution simulation of biogeochemical pathways in E3SM_. Computational Earth Sciences Group. (Oak Ridge, TN)
+_Skillful multiyear predictions of ocean acidification in the California Current System_. Physical Sciences Division, NOAA Earth System Research Lab. (Boulder, CO)
+
+_High resolution simulation of biogeochemical pathways in E3SM_. Computational Earth Sciences Group, Oak Ridge National Lab. (Oak Ridge, TN)
 
 _On the role of climate modes in modulating the air-sea CO2 fluxes in Eastern Boundary Upwelling Systems_. EBUS Webinar Series. [[Video]](https://www.youtube.com/watch?v=hc5r_tOQQDY&t=183s)
 

@@ -64,7 +64,7 @@ __Brady, RX__, NS Lovenduski, SG Yeager, MC Long, and K Lindsay (2020), Skillful
 `2020`
 Elsworth, GE, NS Lovenduski, KA McKinnon, KM Krumhardt, and __RX Brady__ (2020), Finding
 the fingerprint of anthropogenic climate change in marine phytoplankton abundance,
-_Current Climate Change Reports_. DOI: [10.1007/s40641-020-00156-w](https://link.springer.com/article/10.1007/s40641-020-00156-w). [[Online]](https://link.springer.com/article/10.1007/s40641-020-00156-w)
+_Current Climate Change Reports_. DOI: [10.1007/s40641-020-00156-w](https://link.springer.com/article/10.1007/s40641-020-00156-w). [[Online]](https://link.springer.com/article/10.1007/s40641-020-00156-w) [[PDF]](/papers/Elsworth2020.pdf)
 
 `2019`
 __Brady, RX__, NS Lovenduski, MA Alexander, M Jacox, and N Gruber (2019), On the role of climate modes in modulating the air-sea CO2 fluxes in eastern boundary upwelling systems, _Biogeosciences_, 16, 329–346, DOI: [10.5194/bg-16-329-2019](https://www.biogeosciences.net/16/329/2019/). [[PDF]](/papers/Brady2019a.pdf) [[Supplemental]](/papers/Brady2019aSupplemental.pdf) [[Online]](https://www.biogeosciences.net/16/329/2019/)

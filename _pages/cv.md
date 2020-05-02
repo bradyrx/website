@@ -37,7 +37,7 @@ __Cosby High School__ (Midlothian, VA)
 
 ## Research Appointments
 `Summer 2020`
-__Oak Ridge National Laboratory__ Graduate Researcher, Climate Change Science Institute (Oak Ridge, TN)
+__Oak Ridge National Laboratory__ Graduate Researcher, Climate Change Science Institute (Remote)
 
 `2016-present`
 __University of Colorado Boulder__ Graduate Researcher, Institute of Arctic and Alpine Research (Boulder, CO)
@@ -56,21 +56,20 @@ __UNC Institute of Marine Sciences__ NSF REU Scholar, Coastal Fisheries Ecology 
 
 ## Publications
 
-### In Press
-`2020`
-__Brady, RX__, NS Lovenduski, SG Yeager, MC Long, and K Lindsay (2020), Skillful multiyear predictions of ocean acidification in the California Current System, _Nature Communications_. [[Preprint]](/papers/Brady2020.pdf) [[Supplemental]](/papers/Brady2020Supplemental.pdf)
-
 ### Peer-Reviewed
+`2020`
+__Brady, RX__, NS Lovenduski, SG Yeager, MC Long, and K Lindsay (2020), Skillful multiyear predictions of ocean acidification in the California Current System, _Nature Communications_. DOI: [10.1038/s41467-020-15722-x](https://www.nature.com/articles/s41467-020-15722-x). [[PDF]](/papers/Brady2020.pdf) [[Supplemental]](/papers/Brady2020Supplemental.pdf) [[Press Release]](https://www.colorado.edu/today/2020/05/01/ocean-acidification-prediction-now-possible-years-advance)
+
 `2020`
 Elsworth, GE, NS Lovenduski, KA McKinnon, KM Krumhardt, and __RX Brady__ (2020), Finding
 the fingerprint of anthropogenic climate change in marine phytoplankton abundance,
-_Current Climate Change Reports_. DOI: [10.1007/s40641-020-00156-w](https://link.springer.com/article/10.1007/s40641-020-00156-w). [[Online]](https://link.springer.com/article/10.1007/s40641-020-00156-w) [[PDF]](/papers/Elsworth2020.pdf)
+_Current Climate Change Reports_. DOI: [10.1007/s40641-020-00156-w](https://link.springer.com/article/10.1007/s40641-020-00156-w). [[PDF]](/papers/Elsworth2020.pdf)
 
 `2019`
-__Brady, RX__, NS Lovenduski, MA Alexander, M Jacox, and N Gruber (2019), On the role of climate modes in modulating the air-sea CO2 fluxes in eastern boundary upwelling systems, _Biogeosciences_, 16, 329–346, DOI: [10.5194/bg-16-329-2019](https://www.biogeosciences.net/16/329/2019/). [[PDF]](/papers/Brady2019a.pdf) [[Supplemental]](/papers/Brady2019aSupplemental.pdf) [[Online]](https://www.biogeosciences.net/16/329/2019/)
+__Brady, RX__, NS Lovenduski, MA Alexander, M Jacox, and N Gruber (2019), On the role of climate modes in modulating the air-sea CO2 fluxes in eastern boundary upwelling systems, _Biogeosciences_, 16, 329–346, DOI: [10.5194/bg-16-329-2019](https://www.biogeosciences.net/16/329/2019/). [[PDF]](/papers/Brady2019a.pdf) [[Supplemental]](/papers/Brady2019aSupplemental.pdf) 
 
 `2017`
-__Brady, RX__,  MA  Alexander,  NS  Lovenduski,  and  RR  Rykaczewski  (2017),  Emergent anthropogenic trends in California Current upwelling, _Geophys. Res. Lett._, 44, 5044–5052, DOI: [10.1002/2017GL072945](https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2017GL072945). [[PDF]](/papers/Brady2017.pdf) [[Supplemental]](/papers/Brady2017Supplemental.pdf) [[Online]](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2017GL072945) [[Press Release]](https://eos.org/research-spotlights/how-will-climate-change-affect-the-california-current-upwelling)
+__Brady, RX__,  MA  Alexander,  NS  Lovenduski,  and  RR  Rykaczewski  (2017),  Emergent anthropogenic trends in California Current upwelling, _Geophys. Res. Lett._, 44, 5044–5052, DOI: [10.1002/2017GL072945](https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2017GL072945). [[PDF]](/papers/Brady2017.pdf) [[Supplemental]](/papers/Brady2017Supplemental.pdf) [[Press Release]](https://eos.org/research-spotlights/how-will-climate-change-affect-the-california-current-upwelling)
 
 ### Conference Proceedings
 `2019`
@@ -221,6 +220,8 @@ Ambassador, Office of Fellowships; Office of Undergraduate Research; Sustainable
 
 ### Peer Reviewer
 
+*Biogeosciences*
+
 *Earth System Science Data*
 
 *JGR: Oceans* (x2)
@@ -361,4 +362,4 @@ NMFS Marine Resources Population Dynamics Workshop (Layton, FL)
 
 <br>
 
-<center> Last updated: March 2020 </center>
+<center> Last updated: May 2020 </center>

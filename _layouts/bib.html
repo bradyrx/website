@@ -81,6 +81,9 @@
   {% if entry.video %}
       [<a href="{{ entry.video }}">Talk</a>]
   {% endif %}
+  {% if entry.press %}
+  [<a href="{{ entry.press }}">Press Release</a>]
+  {% endif %}
   {% if entry.doi %}
       <div data-badge-type="4" data-doi="{{ entry.doi }}" data-condensed="true" data-hide-no-mentions="true" class="altmetric-embed"></div>
   {% endif %}

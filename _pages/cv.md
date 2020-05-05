@@ -75,6 +75,13 @@ __Brady, RX__,  MA  Alexander,  NS  Lovenduski,  and  RR  Rykaczewski  (2017),  
 `2019`
 Dutta, S, __RX Brady__, ME Maltrud, PJ Wolfram, and R Bujack (2019), Leveraging Lagrangian analysis for discriminating nutrient origins, Visualization in Environmental Sciences (EnvirVis). [[PDF]](/papers/Dutta2019.pdf)
 
+### Non Peer-Reviewed
+`2017`
+__Brady, RX__ (2017), The Basic STEM Toolbox, _NextStep STEM_, 16-17. [[Online]](https://blog.nextstepu.com/shark-walk-to-stem-my-journey-to-oceanography-climate-science/)
+
+`2016`
+__Brady, RX__ (2016), Shark Walk to STEM - My Journey to Oceanography & Climate Science, _NextStepU_. [[Online]](https://blog.nextstepu.com/shark-walk-to-stem-my-journey-to-oceanography-climate-science/)
+
 ## Funded Proposals
 
 ### Lead Principal Investigator
@@ -147,6 +154,10 @@ Barry M. Goldwater Scholarship, United States Congress
 Ernest F. Hollings Scholarship, National Oceanic and Atmospheric Administration
 
 ### Institutional
+`2020`
+Departmental (ATOC) Service Award, _"For providing technical support to
+fellow students and for outstanding mentorship to underrepresented undergraduate students."_
+
 `2016`
 Algernon Sydney Sullivan Award, University of South Carolina (_3 recipients_)
 
@@ -174,7 +185,29 @@ Outstanding Student Presentation Award, Ocean Sciences Meeting
 ### Visualization
 
 `2019`
-Runner-up, Data Visualization and Storytelling Competition, American Geophysical Union
+Runner-up, NASA Data Visualization and Storytelling Competition, American Geophysical Union
+
+## Media
+`2020`
+"Ocean acidification prediction now possible years in advance", _CU Boulder Today_, by Kelsey Simpkins (Research Highlight) [[Online]](https://www.colorado.edu/today/2020/05/01/ocean-acidification-prediction-now-possible-years-advance)
+
+`2020`
+"Killing Rainbows", _IEEE Computer Graphics and Applications_, Volume 40 (2), by Gary Singh. (Cover art and feature story) [[Cover]](/assets/pdf/IEEE_CG_cover.pdf) [[Story]](/assets/pdf/KillingRainbows.pdf)
+
+`2019`
+"Diversifying Peer Review by Adding Junior Scientists", _Undark_, by Dan Garisto. (Quoted) [[Online]](https://undark.org/2019/09/02/diversify-peer-review-junior-scientists/)
+
+`2019`
+"The Great Pacific Garbage Patch from 1982 to 1998, visualized", _Digg_. (Visualization) [[Online]](https://digg.com/2019/the-great-pacific-garbage-patch-visualized)
+
+`2019`
+"The Great Pacific Garbage Patch", front page of reddit. [[Online]](https://old.reddit.com/r/dataisbeautiful/comments/cvoyti/the_great_pacific_garbage_patch_oc/)
+
+`2017`
+"How will climate change affect the California Current upwelling?", _AGU Highlights_, by Terri Cook. (Research Highlight) [[Online]](https://agupubs.onlinelibrary.wiley.com/hub/article/10.1002/2017GL072945/editor-highlight/)
+
+`2011`
+"Cosby's 'man of steel' forges inspirational comeback story", _Richmond Times-Dispatch_, by Fred Jeter. (Feature Story, accompanied by a flattering photo) [[Article]](/assets/img/newspaper_article_2011.jpg)
 
 ## Service
 

@@ -158,6 +158,9 @@ Ernest F. Hollings Scholarship, National Oceanic and Atmospheric Administration
 Departmental (ATOC) Service Award, _"For providing technical support to
 fellow students and for outstanding mentorship to underrepresented undergraduate students."_
 
+`2018`
+Departmental (ATOC) Service Award, _"For successful efforts to involve ATOC students with the oceanography faculty search."_
+
 `2016`
 Algernon Sydney Sullivan Award, University of South Carolina (_3 recipients_)
 

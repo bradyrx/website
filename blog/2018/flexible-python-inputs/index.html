@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Riley X. Brady | Flexible python scripts from the command line</title>
+  <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+">
+
+  <link rel="shortcut icon" href="https://bradyrx.github.io/assets/img/favicon.ico">
+
+  <link rel="stylesheet" href="https://bradyrx.github.io/assets/css/main.css">
+  <link rel="canonical" href="https://bradyrx.github.io/blog/2018/flexible-python-inputs/">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    
+    <span class="site-title">
+        
+        <!-- Hard coded middle initial in here -->
+        <strong>Riley</strong> X. Brady
+    </span>
+    
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+      <div class="trigger">
+        <!-- About -->
+        <a class="page-link" href="https://bradyrx.github.io/">about</a>
+
+        <!-- Blog -->
+        <a class="page-link" href="https://bradyrx.github.io/blog/">blog</a>
+
+        <!-- Pages -->
+        
+          
+        
+          
+            <a class="page-link" href="https://bradyrx.github.io/cv/">vita</a>
+          
+        
+          
+        
+          
+        
+          
+            <a class="page-link" href="https://bradyrx.github.io/publications/">publications</a>
+          
+        
+          
+            <a class="page-link" href="https://bradyrx.github.io/software/">software</a>
+          
+        
+          
+        
+
+        <!-- CV link -->
+        <!-- <a class="page-link" href="https://bradyrx.github.io/assets/pdf/CV.pdf">vitae</a> -->
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Flexible python scripts from the command line</h1>
+    <p class="post-meta">June 24, 2018</p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="preface">Preface</h1>
+
+<p>For this tutorial, I assume that you can handle installing python and some packages on your machine, can open a text editor and write a python script from scratch (or edit the one I provide), and can use the command line to move to a folder and execute a script.</p>
+
+<p>Here is an outline of the tutorial (with links to that part of the page):</p>
+
+<ol>
+  <li>
+    <p><a href="#dataset">Dataset and Packages</a></p>
+  </li>
+  <li>
+    <p><a href="#analysis">Analysis Script</a></p>
+  </li>
+  <li>
+    <p><a href="#flexible">Flexible Header Variables</a></p>
+  </li>
+  <li>
+    <p><a href="#sys">Leveraging <code class="language-plaintext highlighter-rouge">sys</code> to Run from Command Line</a></p>
+  </li>
+  <li>
+    <p><a href="#argparse">Using <code class="language-plaintext highlighter-rouge">argparse</code> for More Options and Documentation</a></p>
+  </li>
+  <li>
+    <p><a href="#conclusion">Conclusions</a></p>
+  </li>
+</ol>
+
+<p>Although my goal here is to teach about creating flexible and reproducable scripts in python for climate data analysis, I hope that readers might also pick up some ideas about visualization and leveraging <code class="language-plaintext highlighter-rouge">xarray</code> for very easy data analysis.</p>
+
+<h2 id="dataset-and-packages-">Dataset and Packages <a name="dataset"></a></h2>
+
+<p>If you want to try out some ideas from this post, make sure you have a version of python installed (ideally python3, since the community is moving there soon anyway). You will need to install <code class="language-plaintext highlighter-rouge">xarray</code>, <code class="language-plaintext highlighter-rouge">netcdf4</code>, <code class="language-plaintext highlighter-rouge">numpy</code>, <code class="language-plaintext highlighter-rouge">matplotlib</code>, and <code class="language-plaintext highlighter-rouge">argparse</code>. Everything else needed should be included in a default installation of python.</p>
+
+<p>The data used is output from one simulation of the Community Earth System Model Large Ensemble (<a href="https://journals.ametsoc.org/doi/abs/10.1175/BAMS-D-13-00255.1">CESM-LE</a>). I took monthly surface temperature (TS) output from the atmospheric component of the coupled model (a very technical description of the Community Atmosphere Model can be found <a href="http://www.cesm.ucar.edu/models/cesm1.0/cam/docs/description/cam5_desc.pdf">here</a>) and sliced it down to January 1990 through December 2000 to make the file small enough.</p>
+
+<p>You can download the data used in this tutorial and example scripts from my Github repository <a href="https://github.com/bradyrx/python_from_command_line">here</a>.</p>
+
+<h2 id="analysis-script-">Analysis Script <a name="analysis"></a></h2>
+
+<p>Let’s first write a working script to which we’ll later return to make it flexible from the command line. Our goal is to take modeled atmospheric surface temperature (TS) and compute the mean seasonal cycle over some region of the world. We’ll make it flexible by allowing the user to pass differing latitude/longitude bounds into the script without having to directly edit it.</p>
+
+<p>Since the focus of this tutorial is on command line input, I won’t spend as much time on the code itself. You can find the full <code class="language-plaintext highlighter-rouge">compute_seasonal_cycle.py</code> in my Github repository <a href="https://github.com/bradyrx/python_from_command_line">here</a>. Feel free to suggest changes to the repository or email me with any comments or questions.</p>
+
+<p>First, let’s load in the dataset and look at its properties:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="n">xr</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s">'../data/CESM_LE.TS.002.1990-01.2000-12.nc'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
+
+<span class="o">&lt;</span><span class="n">xarray</span><span class="o">.</span><span class="n">Dataset</span><span class="o">&gt;</span>
+<span class="n">Dimensions</span><span class="p">:</span>  <span class="p">(</span><span class="n">lat</span><span class="p">:</span> <span class="mi">192</span><span class="p">,</span> <span class="n">lon</span><span class="p">:</span> <span class="mi">288</span><span class="p">,</span> <span class="n">time</span><span class="p">:</span> <span class="mi">132</span><span class="p">)</span>
+<span class="n">Coordinates</span><span class="p">:</span>
+  <span class="o">*</span> <span class="n">lat</span>      <span class="p">(</span><span class="n">lat</span><span class="p">)</span> <span class="n">float64</span> <span class="o">-</span><span class="mf">90.0</span> <span class="o">-</span><span class="mf">89.06</span> <span class="o">-</span><span class="mf">88.12</span> <span class="o">-</span><span class="mf">87.17</span> <span class="o">-</span><span class="mf">86.23</span> <span class="o">-</span><span class="mf">85.29</span> <span class="o">-</span><span class="mf">84.35</span> <span class="o">...</span>
+  <span class="o">*</span> <span class="n">lon</span>      <span class="p">(</span><span class="n">lon</span><span class="p">)</span> <span class="n">float64</span> <span class="mf">0.0</span> <span class="mf">1.25</span> <span class="mf">2.5</span> <span class="mf">3.75</span> <span class="mf">5.0</span> <span class="mf">6.25</span> <span class="mf">7.5</span> <span class="mf">8.75</span> <span class="mf">10.0</span> <span class="mf">11.25</span> <span class="o">...</span>
+  <span class="o">*</span> <span class="n">time</span>     <span class="p">(</span><span class="n">time</span><span class="p">)</span> <span class="n">datetime64</span><span class="p">[</span><span class="n">ns</span><span class="p">]</span> <span class="mi">1990</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span> <span class="mi">1990</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">28</span> <span class="mi">1990</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">31</span> <span class="o">...</span>
+<span class="n">Data</span> <span class="n">variables</span><span class="p">:</span>
+    <span class="n">TS</span>       <span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">)</span> <span class="n">float32</span> <span class="o">-</span><span class="mf">32.9582</span> <span class="o">-</span><span class="mf">32.2339</span> <span class="o">-</span><span class="mf">32.1969</span> <span class="o">-</span><span class="mf">32.1775</span> <span class="o">...</span></code></pre></figure>
+
+<p>This is a pretty straightforward dataset. We have three dimensions:</p>
+
+<ol>
+  <li>latitude in degrees north, which ranges from -90 to 90 by roughly 1 degree</li>
+  <li>longitude in degrees east, from 0 to 360 in 1.25 degree increments</li>
+  <li>time in months from 1990 to 2000.</li>
+</ol>
+
+<p>After importing our data, we will use <code class="language-plaintext highlighter-rouge">xarray</code>’s select feature and <code class="language-plaintext highlighter-rouge">slice</code> to extract our latitude and longitude bounds of interest. In our test case, we extract a region over the tropical Pacific Ocean (Figure 1).</p>
+
+<center>
+<figure class="image">
+  <img src="/assets/img/command_line_python/region_example.png" alt="Region we extract in our test script" width="500px" />
+  <figcaption>Region we extract in our test script</figcaption>
+</figure>
+
+
+</center>
+
+<p>Let’s go ahead and extract that region:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">lon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="mi">240</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
+
+<span class="o">&lt;</span><span class="n">xarray</span><span class="o">.</span><span class="n">Dataset</span><span class="o">&gt;</span>
+<span class="n">Dimensions</span><span class="p">:</span>  <span class="p">(</span><span class="n">lat</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="n">lon</span><span class="p">:</span> <span class="mi">49</span><span class="p">,</span> <span class="n">time</span><span class="p">:</span> <span class="mi">132</span><span class="p">)</span>
+<span class="n">Coordinates</span><span class="p">:</span>
+  <span class="o">*</span> <span class="n">lat</span>      <span class="p">(</span><span class="n">lat</span><span class="p">)</span> <span class="n">float64</span> <span class="o">-</span><span class="mf">4.241</span> <span class="o">-</span><span class="mf">3.298</span> <span class="o">-</span><span class="mf">2.356</span> <span class="o">-</span><span class="mf">1.414</span> <span class="o">-</span><span class="mf">0.4712</span> <span class="mf">0.4712</span> <span class="mf">1.414</span> <span class="o">...</span>
+  <span class="o">*</span> <span class="n">lon</span>      <span class="p">(</span><span class="n">lon</span><span class="p">)</span> <span class="n">float64</span> <span class="mf">180.0</span> <span class="mf">181.2</span> <span class="mf">182.5</span> <span class="mf">183.8</span> <span class="mf">185.0</span> <span class="mf">186.2</span> <span class="mf">187.5</span> <span class="mf">188.8</span> <span class="o">...</span>
+  <span class="o">*</span> <span class="n">time</span>     <span class="p">(</span><span class="n">time</span><span class="p">)</span> <span class="n">datetime64</span><span class="p">[</span><span class="n">ns</span><span class="p">]</span> <span class="mi">1990</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span> <span class="mi">1990</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">28</span> <span class="mi">1990</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">31</span> <span class="o">...</span>
+<span class="n">Data</span> <span class="n">variables</span><span class="p">:</span>
+    <span class="n">TS</span>       <span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">)</span> <span class="n">float32</span> <span class="mf">27.9247</span> <span class="mf">27.8295</span> <span class="mf">27.7346</span> <span class="mf">27.6447</span> <span class="o">...</span></code></pre></figure>
+
+<p>Note that our lat and lon dimensions decreased substantially. Generally, I would area-weight this since the grid cell areas vary with latitude, but we’ll just do a simple mean over latitude and longitude to generate our time series (Figure 2).</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">gridpoints</span><span class="o">=</span><span class="p">[</span><span class="s">'lat'</span><span class="p">,</span><span class="s">'lon'</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s">'gridpoints'</span><span class="p">)</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">ds1</span><span class="p">[</span><span class="s">'TS'</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="s">'k-'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s">'Monthly Tropical Pacific Surface Temperature (1990 - 2000)'</span><span class="p">)</span></code></pre></figure>
+
+<center>
+<figure class="image">
+  <img src="/assets/img/command_line_python/monthly_tropical_temperature.png" alt="Time series of TS in the Tropical Pacific after taking the mean over the region." width="500px" />
+  <figcaption>Time series of TS in the Tropical Pacific after taking the mean over the region.</figcaption>
+</figure>
+
+
+</center>
+
+<p>Lastly, we will find the mean seasonal cycle of this time series (the goal of this analysis). We first need to remove any trend that exists in the time series. To exactly nail down the trend, we would need to remove the CESM-LE ensemble mean, but we do not have access to the full ensemble for this tutorial. Instead, we can approximately remove the trend by subtracting out a 4th-order polynomial fit (Figure 3).</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">numpy.polynomial.polynomial</span> <span class="k">as</span> <span class="n">poly</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="s">'TS'</span><span class="p">]))</span>
+<span class="c1"># Find polynomial coefficients
+</span><span class="n">coefs</span> <span class="o">=</span> <span class="n">poly</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ds</span><span class="p">[</span><span class="s">'TS'</span><span class="p">],</span> <span class="n">deg</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="c1"># Create time series of trend with these coefficients 
+# to remove from the raw time series.
+</span><span class="n">fit</span> <span class="o">=</span> <span class="n">poly</span><span class="o">.</span><span class="n">polyval</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">coefs</span><span class="p">)</span>
+<span class="c1"># Remove the fit but add back in the mean to maintain
+# the magnitude, which we're interested in.
+</span><span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span> <span class="o">-</span> <span class="n">fit</span> <span class="o">+</span> <span class="n">ds</span><span class="p">[</span><span class="s">'TS'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s">'time'</span><span class="p">)</span></code></pre></figure>
+
+<center>
+<figure class="image">
+  <img src="/assets/img/command_line_python/detrending.png" alt="The top panel shows our time series created in Figure 2 with the 4th-order fit in red. The bottom panel shows our time series after removing that fit and adding back in the mean." width="500px" />
+  <figcaption>The top panel shows our time series created in Figure 2 with the 4th-order fit in red. The bottom panel shows our time series after removing that fit and adding back in the mean.</figcaption>
+</figure>
+
+
+</center>
+
+<p>We can now take the mean of each month of our 11 years of data to roughly extract the climatological seasonal cycle (Figure 4). Generally, we should be doing this for many more decades worth of output, because we are subject to noise from internally generated variability with only 11 years of the model run.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">'time.month'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s">'time'</span><span class="p">)</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s">'Seasonal Cycle of Temperature in the Tropical Pacific'</span><span class="p">)</span></code></pre></figure>
+
+<center>
+<figure class="image">
+  <img src="/assets/img/command_line_python/mean_cycle.png" alt="The mean seasonal cycle of TS over the tropical Pacific Ocean." width="500px" />
+  <figcaption>The mean seasonal cycle of TS over the tropical Pacific Ocean.</figcaption>
+</figure>
+
+
+</center>
+
+<p>The following sections explore ways to make this script flexible. You’ll find a polished version of the script that you can edit <a href="https://github.com/bradyrx/python_from_command_line/blob/master/scripts/compute_seasonal_cycle.py">here</a>.</p>
+
+<h2 id="flexible-header-variables-">Flexible Header Variables <a name="flexible"></a></h2>
+
+<p>The most straight forward way to make this code flexible would be to define the latitude/longitude bounds of interest in the head of the code. This allows the user to open up the python script and edit those variables directly when wanting to analyze a seasonal cycle from a different part of the globe.</p>
+
+<p>See <code class="language-plaintext highlighter-rouge">compute_seasonal_cycle.py</code> for its implementation.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"> 
+ <span class="kn">import</span> <span class="nn">...</span>
+ 
+ <span class="n">LAT_BNDS</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+ <span class="n">LON_BNDS</span> <span class="o">=</span> <span class="p">[</span><span class="mi">180</span><span class="p">,</span> <span class="mi">240</span><span class="p">]</span>
+ <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s">'../data/CESM_LE.TS.002.1990-01.2000-12.nc'</span><span class="p">)</span>
+ <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">LAT_BNDS</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">LAT_BNDS</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">lon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">LON_BNDS</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">LON_BNDS</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span></code></pre></figure>
+
+<p>Although it is convenient for one to edit these variables directly, it is not the cleanest way to create flexible code. One still has to open and manually edit the headers every time they want to run a different iteration of the script, which can become time consuming.</p>
+
+<p>Assume you have a list or dictionary of different coordinates you want to analyze. High-throughput computing is the way to go for this—using GNU parallel or a unix loop to run this script multiple times in succession without having to open it and edit it manually every time (<strong>Note</strong>: I intend to do a high-throughput computing tutorial sometime).</p>
+
+<h2 id="leveraging-sys-to-run-from-command-line-">Leveraging <code class="language-plaintext highlighter-rouge">sys</code> to Run from Command Line <a name="sys"></a></h2>
+
+<p>The first way to input variables from the command line is to use the <code class="language-plaintext highlighter-rouge">sys</code> package, which comes with your default python installation. We can use the command <code class="language-plaintext highlighter-rouge">sys.argv[index]</code> to accept arguments from the command line directly following the script name.</p>
+
+<p><strong>NOTE:</strong> <code class="language-plaintext highlighter-rouge">sys.argv[0]</code> returns the name of the script. So your arguments should begin with <code class="language-plaintext highlighter-rouge">sys.argv[1]</code>. All arguments enter the script as strings, since they are coming from the command line. Thus, if you want to make your variable an <code class="language-plaintext highlighter-rouge">int</code>, you need to explicitly force that. See <code class="language-plaintext highlighter-rouge">compute_seasonal_cycle_sys.py</code> for its implementation.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">statements</span>
+ 
+<span class="n">x0</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">y0</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span></code></pre></figure>
+
+<p>Now we can execute the command flexibly from the command line without opening the script:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>python compute_seasonal_cycle.py 180 240 <span class="nt">-5</span> 5</code></pre></figure>
+
+<p>In turn, the script runs and saves out a plot of the mean seasonal cycle over this domain and saves it to the <code class="language-plaintext highlighter-rouge">../output_figs/</code> folder.</p>
+
+<p>Although a step ahead of manually editing the script, this implementation comes with one main issue: you have to remember the order of the arguments you’re inputting. In general, I mediate this by having detailed documentation at the start of my script. I include very easy to find explanations of the inputs to this script, e.g.:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="s">"""
+Compute the mean seasonal cycle of surface temperature given some bounds of
+latitude and longitude.
+
+INPUT 1: (int) Minimum longitude
+INPUT 2: (int) Maximum longitude
+INPUT 3: (int) Minimum latitude
+INPUT 4: (int) Maximum latitude
+"""</span></code></pre></figure>
+
+<p>You can then run a <code class="language-plaintext highlighter-rouge">head</code> command on the script before using it as a reminder of the input order. This is a good method if you don’t have a ton of inputs, since it is a quicker and cleaner setup than <code class="language-plaintext highlighter-rouge">argparse</code>.</p>
+
+<h2 id="using-argparse-for-more-options-and-documentation-">Using <code class="language-plaintext highlighter-rouge">argparse</code> for More Options and Documentation <a name="argparse"></a></h2>
+
+<p>A more sophisticated way to create a flexible python script is through the <code class="language-plaintext highlighter-rouge">argparse</code> package. It takes a few more lines of code to setup, but we can create documentation to go along with it that can be read from the command line.</p>
+
+<p>Setting up <code class="language-plaintext highlighter-rouge">argparse</code> for our example is relatively straight forward. We need to create a parser object, and then declare the command line inputs. The convention for shell scripts is to offer a single dash flag (e.g. -l) as well as a double dash flag (e.g. –lat) that is more verbose. A single dash allows for multiple options to be combined, such as if you want to recursively remove files in a directory (<code class="language-plaintext highlighter-rouge">-r</code>) as well as to have the system check if you really want to go through with the operation (<code class="language-plaintext highlighter-rouge">-i</code>). This could be supplied as <code class="language-plaintext highlighter-rouge">rm -ir</code>. Double dash flags cannot be combined, and thus are passed as single arguments.</p>
+
+<p>In this example, we’ll define required double dash flags for the latitude and longitude bounds, and an optional single and double dash flag to display the resulting plot to the user (instead of just saving it out). The purpose of this tutorial is to introduce you to command line flexibility, not to comprehensively review the <code class="language-plaintext highlighter-rouge">argparse</code> package. After completing these examples, you can explore the advanced features of <code class="language-plaintext highlighter-rouge">argparse</code> in its <a href="https://docs.python.org/3/library/argparse.html">documentation</a>.</p>
+
+<p>See <code class="language-plaintext highlighter-rouge">compute_seasonal_cycle_argparse.py</code> for this implementation.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">argparse</span>
+<span class="c1"># Initialize the argument parser with a description of the code that will
+# show up upon calling --help
+</span><span class="n">ap</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+  <span class="n">description</span><span class="o">=</span><span class="s">"computes the mean seasonal cycle of surface temperature </span><span class="se">\
+</span><span class="s">  in a CESM-LE simulation given latitude and longitude bounds"</span>
+<span class="c1"># Add arguments for inputting latitude and longitude bounds.
+# nargs tells how many arguments should come after an option (min max)
+# required tells the parser whether or not it should expect this option
+# type sets the type (so we don't have to explicitly force int() like 
+# with sys.argv)
+</span><span class="n">ap</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'--lat'</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+	<span class="n">help</span><span class="o">=</span><span class="s">"input latitude bounds separated by a space"</span><span class="p">)</span>
+<span class="n">ap</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'--lon'</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+	<span class="n">help</span><span class="o">=</span><span class="s">"input longitude bounds (0-360) separated by a space"</span><span class="p">)</span>
+<span class="c1"># Add optional flag to output a plot to the screen. The action flag says to
+# store a True boolean if this flag is mentioned.
+</span><span class="n">ap</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-p'</span><span class="p">,</span> <span class="s">'--plot'</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+	<span class="n">action</span><span class="o">=</span><span class="s">'store_true'</span><span class="p">,</span>
+  <span class="n">help</span><span class="o">=</span><span class="s">"whether or not to show the resulting plot to the user"</span><span class="p">)</span>
+<span class="c1"># Create dictionary of input arguments
+</span><span class="n">args</span> <span class="o">=</span> <span class="nb">vars</span><span class="p">(</span><span class="n">ap</span><span class="o">.</span><span class="n">parse_args</span><span class="p">())</span>
+<span class="n">x0</span><span class="p">,</span> <span class="n">x1</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="s">'lon'</span><span class="p">]</span>
+<span class="n">y0</span><span class="p">,</span> <span class="n">y1</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="s">'lat'</span><span class="p">]</span>
+<span class="k">if</span> <span class="n">args</span><span class="p">[</span><span class="s">'plot'</span><span class="p">]:</span>
+	<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></code></pre></figure>
+
+<p>Indeed a lot more goes into setting up <code class="language-plaintext highlighter-rouge">argparse</code> over setting up <code class="language-plaintext highlighter-rouge">sys.argv</code>, but it pays off for really clean documentation and error reporting. Calling this script with <code class="language-plaintext highlighter-rouge">--help</code> from the command line results in the following:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>python compute_seasonal_cycle_argparse.py <span class="nt">--help</span>
+
+usage: compute_seasonal_cycle_argparse.py <span class="o">[</span><span class="nt">-h</span><span class="o">]</span> <span class="nt">--lat</span> LAT LAT <span class="nt">--lon</span> LON LON <span class="o">[</span><span class="nt">-p</span><span class="o">]</span>
+
+computes the mean seasonal cycle of surface temperature <span class="k">in </span>a CESM-LE simulation 
+given latitude and longitude bounds
+
+optional arguments:
+  <span class="nt">-h</span>, <span class="nt">--help</span>     show this <span class="nb">help </span>message and <span class="nb">exit</span>
+  <span class="nt">--lat</span> LAT LAT  input latitude bounds separated by a space
+  <span class="nt">--lon</span> LON LON  input longitude bounds <span class="o">(</span>0-360<span class="o">)</span> separated by a space
+  <span class="nt">-p</span>, <span class="nt">--plot</span>     whether or not to show the resulting plot to the user</code></pre></figure>
+
+<p>If we enter latitude bounds, but forget to enter longitude bounds, we get very clear error reporting (a feature that does not exist for <code class="language-plaintext highlighter-rouge">sys.argv</code>):</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>python compute_seasonal_cycle_argparse.py <span class="nt">--lat</span> 40 45
+
+usage: compute_seasonal_cycle_argparse.py <span class="o">[</span><span class="nt">-h</span><span class="o">]</span> <span class="nt">--lat</span> LAT LAT <span class="nt">--lon</span> LON LON
+                                          <span class="o">[</span><span class="nt">-p</span><span class="o">]</span>
+compute_seasonal_cycle_argparse.py: error: the following arguments are required: <span class="nt">--lon</span></code></pre></figure>
+
+<p>To implement from the command line, simply run something like:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>python compute_seasonal_cycle_argparse.py <span class="nt">-p</span> <span class="nt">--lat</span> 40 45 <span class="nt">--lon</span> 230 250</code></pre></figure>
+
+<h2 id="conclusions-">Conclusions <a name="conclusion"></a></h2>
+
+<p>To efficiently analyze climate data, it is a good practice to create flexible python scripts. This allows one to make one <code class="language-plaintext highlighter-rouge">.py</code> script for a given analysis that can then be modified with inputs (similar to how inputs are given to a function) from the command line. This practice forces proper documentation and saves a lot of time in the long run for analysis.</p>
+
+<p>The easiest way to implement command line argument passing is through the <code class="language-plaintext highlighter-rouge">sys.argv</code> module. Although this is a straight forward implementation, it lacks documentation and forces the user to check the docstring of the code to know what order to input values into.</p>
+
+<p>The better way to set up command line arguments is through the <code class="language-plaintext highlighter-rouge">argparse</code> package. This turns your python code into a well-documented command line script and allows one to pass arguments through single and double dash flags (e.g. -p for optional plotting and –lat to input latitude bounds). <code class="language-plaintext highlighter-rouge">argparse</code> has extensive options not covered in this tutorial that can be found in its <a href="https://docs.python.org/3/library/argparse.html">documentation</a>.</p>
+
+<p>I hope this tutorial was useful in increasing your efficiency in making python analysis scripts. If you have any suggestions for running flexible scripts from the command line, please reach out.</p>
+
+<hr />
+
+<p>Riley Brady</p>
+
+<p>Email : riley.brady@colorado.edu</p>
+
+<p>Twitter : <a href="http://twitter.com/rileyxbrady">@rileyxbrady</a></p>
+
+  </article>
+
+  
+
+</div>
+
+      </div>
+    </div>
+
+    <footer>
+
+  <div class="wrapper">
+    &copy; Copyright 2020 Riley X. Brady.
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. 
+
+    
+        Last updated: March 19th, 2020.
+    
+  </div>
+
+</footer>
+
+
+    <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="https://bradyrx.github.io/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="https://bradyrx.github.io/assets/js/katex.js"></script>
+
+
+
+<!-- Load Anchor JS -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.2/anchor.min.js"></script>
+<script>
+  anchors.options.visible = 'always';
+  anchors.add('article h2, article h3, article h4, article h5, article h6');
+</script>
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="https://bradyrx.github.io/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="https://bradyrx.github.io/assets/css/academicons.min.css">
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', '', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+  </body>
+
+</html>

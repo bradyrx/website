@@ -12,11 +12,11 @@ Ph.D. Candidate in Atmospheric and Oceanic Sciences
 
 <div id="webaddress">
 |
-<a href="mailto:riley.brady@colorado.edu">riley.brady@colorado.edu</a>
+<i class="fas fa-envelope"></i> <a href="mailto:riley.brady@colorado.edu">riley.brady@colorado.edu</a>
 |
-<i class="fa fa-github"></i> <a href="http://github.com/bradyrx">bradyrx</a>
+<i class="fab fa-github"></i> <a href="http://github.com/bradyrx">bradyrx</a>
 |
-<i class="fa fa-twitter"></i> <a href="http://twitter.com/rileyxbrady">rileyxbrady</a>
+<i class="fab fa-twitter"></i> <a href="http://twitter.com/rileyxbrady">rileyxbrady</a>
 |
 </div>
 
@@ -406,9 +406,9 @@ NMFS Marine Resources Population Dynamics Workshop (Layton, FL)
 ## Links
 
 <!-- fa are fontawesome, ai are academicons -->
-* <i class="fa fa-envelope"></i> <a href="mailto:riley.brady@colorado.edu">riley.brady@colorado.edu</a><br />
-* <i class="fa fa-github"></i> <a href="http://github.com/bradyrx">bradyrx</a><br />
-* <i class="fa fa-twitter"></i> <a href="http://twitter.com/rileyxbrady">rileyxbrady</a><br />
+* <i class="fas fa-envelope"></i> <a href="mailto:riley.brady@colorado.edu">riley.brady@colorado.edu</a><br />
+* <i class="fab fa-github"></i> <a href="http://github.com/bradyrx">bradyrx</a><br />
+* <i class="fab fa-twitter"></i> <a href="http://twitter.com/rileyxbrady">rileyxbrady</a><br />
 * <i class="ai ai-google-scholar"></i> <a href="http://scholar.google.com/citations?user=H_nRAbIAAAAJ">Google Scholar</a>
 
 <br>

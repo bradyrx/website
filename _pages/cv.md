@@ -413,4 +413,4 @@ NMFS Marine Resources Population Dynamics Workshop (Layton, FL)
 
 <br>
 
-<center> Last updated: May 2020 </center>
+<center> Last updated: July 2020 </center>

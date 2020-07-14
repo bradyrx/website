@@ -1,7 +1,7 @@
 ---
 layout: page
 title: data visualization
-nav_title: data viz
+nav_title: viz
 description: Examples of static visualizations and movies I've made
 permalink: /viz/
 nav: true

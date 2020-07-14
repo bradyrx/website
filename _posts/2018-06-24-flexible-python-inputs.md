@@ -64,9 +64,14 @@ This is a pretty straightforward dataset. We have three dimensions:
 
 After importing our data, we will use `xarray`'s select feature and `slice` to extract our latitude and longitude bounds of interest. In our test case, we extract a region over the tropical Pacific Ocean (Figure 1).
 
-<center>
-{% include image.html url="/assets/img/command_line_python/region_example.png" description="Region we extract in our test script" %}
-</center>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/posts/command_line_python/region_example.png" alt=""/>
+    </div>
+</div>
+<div class="caption">
+    Region we extract in our test script
+</div>
 
 Let's go ahead and extract that region:
 
@@ -92,9 +97,14 @@ ds1['TS'].plot.line('k-')
 ax.set_title('Monthly Tropical Pacific Surface Temperature (1990 - 2000)')
 {% endhighlight %}
 
-<center>
-{% include image.html url="/assets/img/command_line_python/monthly_tropical_temperature.png" description="Time series of TS in the Tropical Pacific after taking the mean over the region." %}
-</center>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/posts/command_line_python/monthly_tropical_temperature.png" alt=""/>
+    </div>
+</div>
+<div class="caption">
+    Time series of TS in the Tropical Pacific after taking the mean over the region.
+</div>
 
 Lastly, we will find the mean seasonal cycle of this time series (the goal of this analysis). We first need to remove any trend that exists in the time series. To exactly nail down the trend, we would need to remove the CESM-LE ensemble mean, but we do not have access to the full ensemble for this tutorial. Instead, we can approximately remove the trend by subtracting out a 4th-order polynomial fit (Figure 3). 
 
@@ -112,9 +122,14 @@ fit = poly.polyval(x, coefs)
 ds = ds - fit + ds['TS'].mean('time')
 {% endhighlight %}
 
-<center>
-{% include image.html url="/assets/img/command_line_python/detrending.png" description="The top panel shows our time series created in Figure 2 with the 4th-order fit in red. The bottom panel shows our time series after removing that fit and adding back in the mean." %}
-</center>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/posts/command_line_python/detrending.png" alt=""/>
+    </div>
+</div>
+<div class="caption">
+    The top panel shows our time series created in Figure 2 with the 4th-order fit in red. The bottom panel shows our time series after removing that fit and adding back in the mean.
+</div>
 
 We can now take the mean of each month of our 11 years of data to roughly extract the climatological seasonal cycle (Figure 4). Generally, we should be doing this for many more decades worth of output, because we are subject to noise from internally generated variability with only 11 years of the model run.
 
@@ -126,9 +141,15 @@ ds.plot()
 ax.set_title('Seasonal Cycle of Temperature in the Tropical Pacific')
 {% endhighlight %}
 
-<center>
-{% include image.html url="/assets/img/command_line_python/mean_cycle.png" description="The mean seasonal cycle of TS over the tropical Pacific Ocean." %}
-</center>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/posts/command_line_python/mean_cycle.png" alt=""/>
+    </div>
+</div>
+<div class="caption">
+    The mean seasonal cycle of TS over the tropical Pacific Ocean.
+</div>
+
 
 The following sections explore ways to make this script flexible. You'll find a polished version of the script that you can edit [here](https://github.com/bradyrx/python_from_command_line/blob/master/scripts/compute_seasonal_cycle.py).
 

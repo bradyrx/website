@@ -1,8 +1,10 @@
 ---
 layout: cv
 title: vita 
+nav_title: vita
 permalink: /cv/
 author_profile: false
+nav: true
 ---
 
 # Riley X. Brady 
@@ -86,7 +88,7 @@ __Brady, RX__ (2016), Shark Walk to STEM - My Journey to Oceanography & Climate 
 
 ### Lead Principal Investigator
 
-`2016-2019`
+`2016-2020`
 __Brady, RX__, *Department of Energy Computational Science Graduate Fellowship*, $450,000 total award.
 
 `2014-2015`
@@ -132,14 +134,14 @@ __Brady, RX__ and RR Rykaczewski, Ocean ecosystems in 2100. *SC Honors College S
 
 [esmtools](https://github.com/bradyrx/esmtools/): a toolbox for Earth system model analysis.
 
+[xskillscore](https://github.com/raybellwaves/xskillscore/graphs/contributors): metrics for verifying forecasts using xarray. Added an option to weight all metrics (e.g. by grid cell area) and skip NaNs (e.g. when masking).
+
 ### Contributor
 [esmlab](https://github.com/NCAR/esmlab/graphs/contributors): tools for working with Earth system multi-model analyses with xarray. Added statistical significance testing for correlations.
 
+[LIGHT](https://pwolfram.github.io/light/): a Lagrangian particle tracking system for the MPAS ocean model. Added biogeochemical "sensors" for the autonomous floats.
+
 [mpas-analysis](https://github.com/MPAS-Dev/MPAS-Analysis/graphs/contributors): automated analysis of the components of the MPAS model. Added diagnostics for ocean biogeochemistry.
-
-[pop-tools](https://github.com/NCAR/pop-tools/graphs/contributors): tools to support analysis of the POP ocean model in CESM. Added an automated ocean tracer budget module.
-
-[xskillscore](https://github.com/raybellwaves/xskillscore/graphs/contributors): metrics for verifying forecasts using xarray. Added an option to weight all metrics (e.g. by grid cell area) and skip NaNs (e.g. when masking).
 
 ## Awards
 
@@ -210,7 +212,7 @@ Runner-up, NASA Data Visualization and Storytelling Competition, American Geophy
 "How will climate change affect the California Current upwelling?", _AGU Highlights_, by Terri Cook. (Research Highlight) [[Online]](https://agupubs.onlinelibrary.wiley.com/hub/article/10.1002/2017GL072945/editor-highlight/)
 
 `2011`
-"Cosby's 'man of steel' forges inspirational comeback story", _Richmond Times-Dispatch_, by Fred Jeter. (Feature Story, accompanied by a flattering photo) [[Article]](/assets/img/newspaper_article_2011.jpg)
+"Cosby's 'man of steel' forges inspirational comeback story", _Richmond Times-Dispatch_, by Fred Jeter. (Feature story, accompanied by a flattering photo) [[Article]](/assets/img/newspaper_article_2011.jpg)
 
 ## Service
 
@@ -294,7 +296,7 @@ Guest Lecturer, _Intro to Scientific Computing for Earth Sciences_ (Color Theory
 
 ### Invited Talks
 `2020`
-_Effective Use of Color in Scientific Visualization_. Colorado State University. (Fort Collins, CO)
+_climpred: an xarray wrapper for analysis of ensemble forecast models for climate prediction_. CESM Workshop. (remote)
 
 `2019`
 _Skillful multiyear predictions of ocean acidification in the California Current System_. Physical Sciences Division, NOAA Earth System Research Lab. (Boulder, CO)
@@ -314,6 +316,9 @@ _Southern Ocean Carbon Hotspots in E3SM_. Climate, Ocean, and Sea Ice Modeling (
 _Emergence of Anthropogenic Trends in California Current Upwelling in the Presence of Natural Climate Variability_.  NCAR Oceanography Section. (Boulder, CO)
 
 ### Conference Talks
+`2020`
+_Lagrangian circulation of carbon from the Southern Ocean abyss_. Department of Energy Computational Science Graduate Fellowship Annual Review. (remote)
+
 `2019`
 _Skillful multiyear predictions of ocean acidification in the California Current System_. Eastern Pacific Ocean Conference. (South Lake Tahoe, CA)
 
@@ -333,7 +338,12 @@ _The influence of natural variability on future California Current upwelling_. A
 _Quantifying natural and anthropogenic variation in California Current upwelling_. Eastern Pacific Ocean Conference.  (South Lake Tahoe, CA) [[Slides]](https://speakerdeck.com/bradyrx/quantifying-natural-and-anthropogenic-variation-in-california-current-upwelling)
 
 ### Posters
+`2020`
+_Lagrangian pathways of dissolved inorganic carbon in the Southern Ocean_. Ocean Sciences Meeting. (San Diego, CA)
+
 `2019`
+_Skillful multiyear predictions of ocean acidification in the California Current System_. Graduate Climate Conference. (Woods Hole, MA)
+
 _Skillful multiyear predictions of ocean acidification in the California Current System_. Chapman Conference on Understanding Carbon Climate Feedbacks. (La Jolla, CA)
 
 _Skillful multiyear predictions of ocean acidification in the California Current System_. CLIVAR Large Ensembles Workshop. (Boulder, CO)
@@ -351,8 +361,13 @@ _Emergence of anthropogenic trends in California Current upwelling in the presen
 _Consequences of changing high-pressure zones on future coastal upwelling_. Ocean Sciences Meeting. (Honolulu, HI)
 
 ### Workshops
+`2020`
+_The climpred diagnostics package_. Earth System Prediction Working Group, National Center for Atmospheric Research (NCAR). (Boulder, CO) [[Github Repo with Binder]](https://github.com/bradyrx/climpred_workshop)
+
+_Effective Use of Color in Scientific Visualization_. Colorado State University. (Fort Collins, CO)
+
 `2019`
-_Effective Use of Color in Climate Science Visualizations_. ATOC Graduate Student Forum. (Boulder, CO) [[Github Repo with Binder]](https://github.com/bradyrx/climate_science_colormapping)
+_Effective Use of Color in Climate Science Visualizations_. ATOC Graduate Student Forum. (Boulder, CO) [[Github Repo with Binder]](https://github.com/bradyrx/climate_in_color)
 
 _Introduction to Git Version Control_. ATOC Graduate Student Forum. (Boulder, CO)
 

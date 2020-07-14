@@ -1,13 +1,16 @@
 ---
 layout: page
 title: software
+nav_title: software
+description: open-source contributions
 permalink: /software/
+nav: true
 ---
 
 [comment]: <> (This adds padding between software packages.)
 <style>
 p {
-    padding-bottom: 2.5cm;
+    padding-bottom: 1.5cm;
 }
 </style>
 
@@ -15,7 +18,7 @@ My primary data analysis tool is the wonderful open-source language, python. The
 
 ## core developer
 
-| <img src="/assets/img/software/climpred-logo.png" style="width: 300px;"/>   |
+| <center><img src="/assets/img/software/climpred-logo.png" style="width: 300px;"/></center>   |
 |--------|
 |  <center>co-founding author and core developer</center> |
 | <center>:earth_americas:  an xarray wrapper for analysis of ensemble forecast models for climate prediction  :earth_americas:</center> |
@@ -24,7 +27,7 @@ My primary data analysis tool is the wonderful open-source language, python. The
 <p>
 </p>
 
-| <img src="/assets/img/software/esmtools.png" style="width: 300px;"/> |
+| <center><img src="/assets/img/software/esmtools.png" style="width: 300px;"/></center> |
 |--------|
 |  <center>founding author and core developer</center> |
 | <center>:octopus:  a toolbox for Earth System Model analysis  :octopus:</center> |
@@ -33,9 +36,19 @@ My primary data analysis tool is the wonderful open-source language, python. The
 <p>
 </p>
 
+| <center><font size="28px">xskillscore</font></center> |
+|--------|
+|  <center>core developer/maintainer</center> |
+| <center>xarray wrapper for metrics for verifying forecasts</center> |
+| <center><a href="https://github.com/raybellwaves/xskillscore/graphs/contributors">added</a> area-weighting and skipna to all functions</center>|
+| <center>documentation and installation <a href="https://github.com/raybellwaves/xskillscore">here</a> </center> |
+
+<p>
+</p>
+
 ## contributor
 
-| <font size="28px">esmlab</font> |
+| <center><font size="28px">esmlab</font></center> |
 |--------|
 |  <center>contributing author</center> |
 | <center>NCAR package of tools for working with Earth system multi-model analyses with xarray</center> |
@@ -45,29 +58,24 @@ My primary data analysis tool is the wonderful open-source language, python. The
 <p>
 </p>
 
-| MPAS-Analysis <br> <img src="/assets/img/software/mpas-analysis.png" style="width: 250px;"/>|
+| <center><font size="5px">Lagrangian, In Situ, Global, High-Performance Particle Tracking (LIGHT)</font></center>|
+|--------|
+|  <center>contributing author</center> |
+| <center>an online Lagrangian particle tracking system for the MPAS–O ocean model</center> |
+| <center><a href="/viz/southern_ocean_carbon/">Added biogeochemical "sensors"</a> so the floats can record the time history of carbon, nutrients, and oxygen</center>|
+| <center>description of LIGHT <a href="https://pwolfram.github.io/light/">here</a> </center> |
+
+<p>
+</p>
+
+| <center>MPAS-Analysis <br> <img src="/assets/img/software/mpas-analysis.png" style="width: 250px;"/></center>|
 |--------|
 |  <center>contributing author</center> |
 | <center>provides analysis for the Model for Prediction Across Scales (MPAS) components of ACME</center> |
 | <center><a href="https://github.com/MPAS-Dev/MPAS-Analysis/graphs/contributors">added</a> support for ocean biogeochemistry</center>|
-| <center>documentation and installation <a href="https://mpas-analysis.readthedocs.io/en/master/">here</a> </center> |
+| <center>documentation and installation <a href="https://mpas-dev.github.io/MPAS-Analysis/stable/">here</a> </center> |
 
 <p>
 </p>
 
-| <font size="28px">pop-tools</font> |
-|--------|
-|  <center>contributing author</center> |
-| <center>NCAR package of tools to support analysis of POP2-CESM model solutions</center> |
-| <center><a href="https://github.com/NCAR/pop-tools/graphs/contributors">added</a> module for computing tracer budgets</center>|
-| <center>documentation and installation <a href="https://pop-tools.readthedocs.io/en/latest/">here</a> </center> |
 
-<p>
-</p>
-
-| <font size="28px">xskillscore</font> |
-|--------|
-|  <center>contributing author</center> |
-| <center>xarray wrapper for metrics for verifying forecasts</center> |
-| <center><a href="https://github.com/raybellwaves/xskillscore/graphs/contributors">added</a> area-weighting and skipna to all functions</center>|
-| <center>documentation and installation <a href="https://github.com/raybellwaves/xskillscore">here</a> </center> |

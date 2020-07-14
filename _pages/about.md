@@ -1,20 +1,21 @@
 ---
 layout: about
+title: Riley X. <b>Brady</b>
 permalink: /
-title: <strong>Riley</strong> X. Brady
-description: <a href="">PhD Candidate in Atmospheric & Oceanic Sciences</a>. DOE CSGF Fellow.
+description: <i><a href="">PhD Candidate in Atmospheric & Oceanic Sciences</a>. DOE CSGF Fellow</i>
 
 profile:
   align: left
-  image: profile.jpg
+  image: prof_pic.jpg
 
-news: true 
+news: true
 social: true
 ---
 
+
 I analyze output from state-of-the-art Earth System Models (ESMs) to understand the impacts of internal climate variability and anthropogenic climate change on regional ocean biogeochemistry. In particular, I focus on carbonate chemistry in Eastern Boundary Upwelling Systems and more recently the Southern Ocean. 
 
-My toolkit generally includes multi-model and single-model ensembles. I have used these to assess signal-to-noise ratios in long-term projections of upwelling [(Brady et al., 2017)](/papers/Brady2017.pdf), to isolate the influence of internal climate variability on air-sea  CO$$_{2}$$ fluxes [(Brady et al., 2019)](/papers/Brady2019.pdf), and to make multiyear forecasts of pH [(Brady et al., 2020)](/papers/Brady2020.pdf). On occasion, I assess satellite and in situ products, but am most eager to use supercomputers in my work. 
+My toolkit generally includes multi-model and single-model ensembles. I have used these to assess signal-to-noise ratios in long-term projections of upwelling [(Brady et al., 2017)](/papers/Brady2017.pdf), to isolate the influence of internal climate variability on air-sea  CO$$_{2}$$ fluxes [(Brady et al., 2019)](/papers/Brady2019.pdf), and to make multiyear forecasts of pH [(Brady et al., 2020)](/papers/Brady2020.pdf). On occasion, I assess satellite and *in situ* products, but am most eager to use supercomputers in my work. 
 
 I [contribute](/software) to a number of open-source python packages for the geosciences and am a core developer for [climpred](https://climpred.readthedocs.io) and [esmtools](https://esmtools.readthedocs.io). I am passionate about data visualization and have recently been working with ParaView to make [movies](https://vimeo.com/user96067365) of high-resolution climate models.
 

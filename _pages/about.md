@@ -2,7 +2,7 @@
 layout: about
 title: Riley X. <b>Brady</b>
 permalink: /
-description: <i><a href="">PhD Candidate in Atmospheric & Oceanic Sciences</a>. DOE CSGF Fellow</i>
+description: <i><a href="https://instaar.colorado.edu/people/riley-brady/">PhD Candidate in Atmospheric & Oceanic Sciences</a>. DOE CSGF Fellow</i>
 
 profile:
   align: left

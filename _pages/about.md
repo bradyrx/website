@@ -21,4 +21,4 @@ I [contribute](/software) to a number of open-source python packages for the geo
 
 I am a Ph.D. candidate in [Atmospheric and Oceanic Sciences](http://www.colorado.edu/atoc/) at the University of Colorado Boulder. I collaborate with the [NOAA Earth System Research Lab](https://www.esrl.noaa.gov/psd/), [National Center for Atmospheric Research](http://www.cgd.ucar.edu/), [Los Alamos National Lab](https://www.lanl.gov/org/ddste/aldsc/theoretical/index.php), and [Oak Ridge National Lab](https://www.ornl.gov/group/ces). My research is supported by the Department of Energy through a [Computational Science Graduate Fellowship](https://www.krellinst.org/csgf/fellows/profile?n=brady2016).
 
-You can find an html copy of my CV [here](/cv) and PDF version [here](https://github.com/bradyrx/public_documents/blob/master/BradyRX_CV.pdf).
+You can find an html copy of my CV [here](/cv) and PDF version [here](https://github.com/bradyrx/public_documents/blob/master/BradyRX_CV.pdf). My one-page industry resume can be found [here](https://github.com/bradyrx/public_documents/blob/master/BradyRX_resume.pdf).

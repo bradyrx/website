@@ -218,7 +218,7 @@ Runner-up, NASA Data Visualization and Storytelling Competition, American Geophy
 
 ### Mentorship
 `2020`
-Programming Mentor, Isis Allanah (SMART; University of Puerto Rico)
+Programming Mentor, Isis Díaz (SMART; University of Puerto Rico)
 
 `2019` 
 Programming Mentor, Holly Olivarez (SOARS; University of New Mexico)

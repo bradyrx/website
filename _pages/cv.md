@@ -59,6 +59,8 @@ __UNC Institute of Marine Sciences__ NSF REU Scholar, Coastal Fisheries Ecology 
 ## Publications
 
 ### Peer-Reviewed
+`2020`Schlunegger, S, Y Eddebbar, __RX Brady__, and FA Burger (2020), Applications of Large Ensembles for marine biogeochemistry, _US CLIVAR Variations_, 18 (2). [[PDF]](/papers/Schlunegger2020.pdf) [[Online]](https://indd.adobe.com/view/20699135-35f6-4eaf-b85e-77553c2d0a4e)
+
 `2020`
 __Brady, RX__, NS Lovenduski, SG Yeager, MC Long, and K Lindsay (2020), Skillful multiyear predictions of ocean acidification in the California Current System, _Nature Communications_. DOI: [10.1038/s41467-020-15722-x](https://www.nature.com/articles/s41467-020-15722-x). [[PDF]](/papers/Brady2020.pdf) [[Supplemental]](/papers/Brady2020Supplemental.pdf) [[Press Release]](https://www.colorado.edu/today/2020/05/01/ocean-acidification-prediction-now-possible-years-advance)
 
@@ -77,7 +79,7 @@ __Brady, RX__,  MA  Alexander,  NS  Lovenduski,  and  RR  Rykaczewski  (2017),  
 `2019`
 Dutta, S, __RX Brady__, ME Maltrud, PJ Wolfram, and R Bujack (2019), Leveraging Lagrangian analysis for discriminating nutrient origins, Visualization in Environmental Sciences (EnvirVis). [[PDF]](/papers/Dutta2019.pdf)
 
-### Non Peer-Reviewed
+### Magazine Articles
 `2017`
 __Brady, RX__ (2017), The Basic STEM Toolbox, _NextStep STEM_, 16-17. [[Online]](https://blog.nextstepu.com/shark-walk-to-stem-my-journey-to-oceanography-climate-science/)
 

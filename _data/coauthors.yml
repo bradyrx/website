@@ -7,6 +7,9 @@ Bujack:
 Burger:
     url: https://www.climate.unibe.ch/about_us/team/personalpages/index_eng.html?id=burger
 
+Drake:
+    url: https://hdrake.github.io/
+
 Dutta:
     url: https://sites.google.com/view/soumyadutta
 
@@ -42,6 +45,9 @@ Rykaczewski:
 
 Schlunegger:
     url: https://www.sarahschlunegger.com/
+
+Spring:
+    url: https://mpimet.mpg.de/en/staff/aaron-spring-1
 
 Wolfram:
     url: https://pwolfram.github.io/

@@ -4,7 +4,7 @@ permalink: /publications/
 title: publications
 nav_title: publications
 description: peer-reviewed manuscripts
-years: [2020, 2019, 2017]
+years: [2021, 2020, 2019, 2017]
 nav: true
 ---
 

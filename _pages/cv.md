@@ -22,8 +22,8 @@ Ph.D. Candidate in Atmospheric and Oceanic Sciences
 
 
 ## Education
-`current`
-__University of Colorado Boulder__ PhD Candidate in Atmospheric and Oceanic Sciences (Boulder, CO)
+`2021`
+__University of Colorado Boulder__ PhD in Atmospheric and Oceanic Sciences (Boulder, CO)
 
 `2018`
 __University of Colorado Boulder__ MS in Atmospheric and Oceanic Sciences (Boulder, CO)
@@ -37,12 +37,15 @@ __Otto-Friedrich Universität Bamberg__ Minor in German (Bamberg, Germany)
 `2012`
 __Cosby High School__ (Midlothian, VA)
 
-## Research Appointments
+## Work Experience
+`2021 – present`
+__McKinsey & Company__ Senior Data Scientist, Climate Analytics (Denver, CO)
+
+`2016-2021`
+__University of Colorado Boulder__ Graduate Researcher, Institute of Arctic and Alpine Research (Boulder, CO)
+
 `Summer 2020`
 __Oak Ridge National Laboratory__ Graduate Researcher, Climate Change Science Institute (Remote)
-
-`2016-present`
-__University of Colorado Boulder__ Graduate Researcher, Institute of Arctic and Alpine Research (Boulder, CO)
 
 `Summer 2018` 
 __Los Alamos National Laboratory__ Graduate Researcher, Theoretical Division (Los Alamos, NM)
@@ -59,6 +62,8 @@ __UNC Institute of Marine Sciences__ NSF REU Scholar, Coastal Fisheries Ecology 
 ## Publications
 
 ### Peer-Reviewed
+`2021` __Brady, RX__ and A Spring (2021), climpred: Verification of weather and climate forecasts, _Journal of Open Source Software_, 6 (59), 2781. [[PDF]](/papers/Brady2021b.pdf) [[Online]](https://joss.theoj.org/papers/10.21105/joss.02781)
+
 `2020`Schlunegger, S, Y Eddebbar, __RX Brady__, and FA Burger (2020), Applications of Large Ensembles for marine biogeochemistry, _US CLIVAR Variations_, 18 (2). [[PDF]](/papers/Schlunegger2020.pdf) [[Online]](https://indd.adobe.com/view/20699135-35f6-4eaf-b85e-77553c2d0a4e)
 
 `2020`
@@ -417,4 +422,4 @@ NMFS Marine Resources Population Dynamics Workshop (Layton, FL)
 
 <br>
 
-<center> Last updated: July 2020 </center>
+<center> Last updated: March 2021 </center>

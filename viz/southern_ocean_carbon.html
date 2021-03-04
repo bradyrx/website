@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>Riley X. Brady | Riley X. Brady</title>
+<title>Riley X. Brady | Southern Ocean Carbon</title>
 <meta name="description" content="The personal/academic page for Riley Brady.">
 
 <!-- Bootstrap & MDB -->
@@ -22,15 +22,15 @@
 <link rel="shortcut icon" href="/assets/img/favicon.ico">
 <link rel="stylesheet" href="/assets/css/main.css">
 
-<link rel="canonical" href="/blog/">
+<link rel="canonical" href="/viz/southern_ocean_carbon">
 
 <!-- Open Graph -->
 
 <meta property="og:site_name" content="The personal/academic page for Riley Brady." />
 <meta property="og:type" content="object" />
 <meta property="og:title" content="" />
-<meta property="og:url" content="https://bradyrx.github.io/blog/index.html" />
-<meta property="og:description" content="Riley X. Brady" />
+<meta property="og:url" content="https://bradyrx.github.io/viz/southern_ocean_carbon" />
+<meta property="og:description" content="Southern Ocean Carbon" />
 <meta property="og:image" content="/assets/img/viz/southern_ocean_carbon/thumb.jpg" />
 
 
@@ -72,7 +72,7 @@
           </li>
           
           <!-- Blog -->
-          <li class="nav-item active">
+          <li class="nav-item ">
             <a class="nav-link" href="/blog/">
               blog
               
@@ -148,24 +148,80 @@
     <div class="container mt-5">
       <div class="post">
 
-  <div class="header-bar">
-    <h1>coding and climate</h1>
-    <h2>my musings on programming and the Earth system</h2>
-  </div>
-
-
-  <ul class="post-list">
+  <header class="post-header">
     
-      <li>
-        <h3><a class="post-title" href="/blog/2018/flexible-python-inputs/">Flexible python scripts from the command line</a></h3>
-        <p class="post-meta">June 24, 2018</p>
-        <p>A tutorial for creating python scripts for data analysis that allow various inputs from the command line to make them more flexible.</p>
-      </li>
+      <h1 class="post-title"><center>Southern Ocean Carbon</center></h1>
     
-  </ul>
+    <p class="post-description"></p>
+  </header>
 
-  
+  <article>
+    <table>
+    <thead>
+    <th><center>Tools</center></th>
+    </thead>
+    
+    <tfoot>
+    <td colspan="1">
+    </td>
+    </tfoot>
+    
+    <tbody>
+    <td><center>ParaView, python, Fortran</center></td>
+    </tbody>
+</table>
+<table>
+    <thead>
+    <th><center>Awards</center></th>
+    </thead>
+    
+    <tfoot>
+    <td colspan="1">
+    </td>
+    </tfoot>
+    
+    <tbody>
+    <td><center>Runner-Up, NASA Data Visualization and Storytelling Competition</center></td>
+    </tbody>
+</table>
 
+<p>As a part of my <a href="https://www.krellinst.org/csgf/fellows/profile?n=brady2016">Department of Energy Computational Science Graduate Fellowship</a>, I spent a summer at Los Alamos National Lab running simulations of their global ocean model. It’s called the <a href="https://mpas-dev.github.io/ocean/ocean.html">Model For Prediction Across Scales–Ocean</a> (MPAS-O), and it’s super cool.</p>
+
+<p>The majority of climate models use <a href="https://en.wikipedia.org/wiki/Regular_grid">rectilinear or curvilinear meshes</a>, which create discrete grid cells by drawing straight or curved lines over the Earth’s surface like a tic-tac-toe board. Instead, MPAS–O uses an “unstructed” mesh of hexagons. This allows one to vary the size of hexagons in important areas of interest–such as coastlines–while keeping larger hexagons in other areas of the ocean to save computational expense.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/viz/southern_ocean_carbon/hex_mesh.png" alt="" />
+    </div>
+</div>
+<div class="caption">
+    The MPAS–O model mesh. From Petersen et. al (2019), <i>JAMES</i>.
+</div>
+
+<p>In the simulations I ran, we used what’s called a Lagrangian particle tracking system. Specifically, we used code called <a href="https://pwolfram.github.io/light/">LIGHT</a> written by one of my Los Alamos advisors, <a href="pwolfram.github.io">Phil Wolfram</a>. The classical view of a climate model is Eulerian in nature. In this framework, we grid the Earth into discrete cells (in this case hexagons) and solve Partial Differential Equations (PDEs) of fundamental fluid physics, stepping forward in time. This method produces a single value for each grid cell at each time step for a suite of variables: things like temperature, salinity, sea surface height, dissolved carbon, and nutrients. However, these grid cells are hundreds of kilometers on each side. The temperature or dissolved carbon in a given grid cell is the result of myriad processes, such as mixing, air-sea exchange, biology, and upwelling. By using the Lagrangian framework, it’s as if we drop a bunch of autonomous submarines in the water that track how individual water parcels flow. Or if we were to drop <a href="https://www.npr.org/2011/03/29/134923863/moby-duck-when-28-800-bath-toys-are-lost-at-sea">thousands of rubber ducks at sea</a> to watch how the currents flow.</p>
+
+<p>The results of such a simulation are stunning.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/viz/southern_ocean_carbon/thumb.jpg" alt="" />
+    </div>
+</div>
+<div class="caption">
+    Trajectories of surface floats over one month of simulation in MPAS–O. They are colored by the temperature they record every two days. Each line follows a single float's path.
+</div>
+
+<p>While static images are nice, I think you can really get intuition for how carbon flows around the ocean with some movies. To make these videos, I used Paraview, an open-source visualization application. In the first video, I show carbon flowing between 500 m and 3,000 m depth. The trajectories are colored by their carbon content, where the yellow colors are carbon-deplete (toward the surface) and purple colors carbon-enriched (toward depth).</p>
+
+<iframe src="https://player.vimeo.com/video/365579177" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
+<p><a href="https://vimeo.com/365579177">The Flow of Dissolved Carbon in the Southern Ocean</a> from <a href="https://vimeo.com/user96067365">Riley Brady</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+<p>This video is similar, but I was experimenting with a rotating view around the Southern Ocean. The land mass on top is Antarctica, and you can see individual floats move around on the surface.</p>
+
+<iframe src="https://player.vimeo.com/video/337393622" width="640" height="512" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
+<p><a href="https://vimeo.com/337393622">Surface BGC Floats in MPAS Ocean</a> from <a href="https://vimeo.com/user96067365">Riley Brady</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+  </article>
 
 </div>
 

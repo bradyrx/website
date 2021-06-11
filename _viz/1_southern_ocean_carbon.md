@@ -25,7 +25,7 @@ The majority of climate models use [rectilinear or curvilinear meshes](https://e
 
 In the simulations I ran, we used what's called a Lagrangian particle tracking system. Specifically, we used code called [LIGHT](https://pwolfram.github.io/light/) written by one of my Los Alamos advisors, [Phil Wolfram](pwolfram.github.io). The classical view of a climate model is Eulerian in nature. In this framework, we grid the Earth into discrete cells (in this case hexagons) and solve Partial Differential Equations (PDEs) of fundamental fluid physics, stepping forward in time. This method produces a single value for each grid cell at each time step for a suite of variables: things like temperature, salinity, sea surface height, dissolved carbon, and nutrients. However, these grid cells are hundreds of kilometers on each side. The temperature or dissolved carbon in a given grid cell is the result of myriad processes, such as mixing, air-sea exchange, biology, and upwelling. By using the Lagrangian framework, it's as if we drop a bunch of autonomous submarines in the water that track how individual water parcels flow. Or if we were to drop [thousands of rubber ducks at sea](https://www.npr.org/2011/03/29/134923863/moby-duck-when-28-800-bath-toys-are-lost-at-sea) to watch how the currents flow.
 
-The results of such a simulation are stunning. 
+The results of such a simulation are stunning.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -34,6 +34,15 @@ The results of such a simulation are stunning.
 </div>
 <div class="caption">
     Trajectories of surface floats over one month of simulation in MPAS–O. They are colored by the temperature they record every two days. Each line follows a single float's path.
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/viz/southern_ocean_carbon/carbon_iris.jpg" alt=""/>
+    </div>
+</div>
+<div class="caption">
+    Trajectories of all floats over one month of simulation in MPAS–O. They are colored by the dissolved inorganic carbon they record every two days. Each line follows a single float's path. Bluer colors near Antarctica denote enriched dissolved inorganic carbon driven by respiration of dead organic matter at depth and its subsequent curl-driven upwelling to the surface.
 </div>
 
 While static images are nice, I think you can really get intuition for how carbon flows around the ocean with some movies. To make these videos, I used Paraview, an open-source visualization application. In the first video, I show carbon flowing between 500 m and 3,000 m depth. The trajectories are colored by their carbon content, where the yellow colors are carbon-deplete (toward the surface) and purple colors carbon-enriched (toward depth).

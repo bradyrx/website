@@ -7,11 +7,11 @@ email: riley.brady@colorado.edu
 description: The personal/academic page for Riley Brady.
 footer_text: >
   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and based on the <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. 
+  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 
 url: https://bradyrx.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/
-last_updated: July 2020 # set to true if you want to display last updated in the footer
+last_updated: June 2021 # set to true if you want to display last updated in the footer
 
 # -----------------------------------------------------------------------------
 # Layout
@@ -41,7 +41,7 @@ scholar_userid: H_nRAbIAAAAJ # your Google Scholar ID
 research_gate_profile: Riley_Brady # your profile on ResearchGate
 
 contact_note: >
-  You can reach me at riley.brady@colorado.edu. 
+  You can reach me at riley.brady@colorado.edu.
 
 google_analytics: UA-90792639-1 # out your google-analytics code
 
@@ -76,7 +76,7 @@ collections:
       layout: post
     output: true
     permalink: /news/:path/
-  
+
 news_limit: 5
 
 # -----------------------------------------------------------------------------

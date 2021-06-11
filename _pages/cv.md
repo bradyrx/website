@@ -1,13 +1,13 @@
 ---
 layout: cv
-title: vita 
+title: vita
 nav_title: vita
 permalink: /cv/
 author_profile: false
 nav: true
 ---
 
-# Riley X. Brady 
+# Riley X. Brady
 Ph.D. Candidate in Atmospheric and Oceanic Sciences
 
 <div id="webaddress">
@@ -47,7 +47,7 @@ __University of Colorado Boulder__ Graduate Researcher, Institute of Arctic and 
 `Summer 2020`
 __Oak Ridge National Laboratory__ Graduate Researcher, Climate Change Science Institute (Remote)
 
-`Summer 2018` 
+`Summer 2018`
 __Los Alamos National Laboratory__ Graduate Researcher, Theoretical Division (Los Alamos, NM)
 
 `2012-2016`
@@ -75,7 +75,7 @@ the fingerprint of anthropogenic climate change in marine phytoplankton abundanc
 _Current Climate Change Reports_. DOI: [10.1007/s40641-020-00156-w](https://link.springer.com/article/10.1007/s40641-020-00156-w). [[PDF]](/papers/Elsworth2020.pdf)
 
 `2019`
-__Brady, RX__, NS Lovenduski, MA Alexander, M Jacox, and N Gruber (2019), On the role of climate modes in modulating the air-sea CO2 fluxes in eastern boundary upwelling systems, _Biogeosciences_, 16, 329–346, DOI: [10.5194/bg-16-329-2019](https://www.biogeosciences.net/16/329/2019/). [[PDF]](/papers/Brady2019a.pdf) [[Supplemental]](/papers/Brady2019aSupplemental.pdf) 
+__Brady, RX__, NS Lovenduski, MA Alexander, M Jacox, and N Gruber (2019), On the role of climate modes in modulating the air-sea CO2 fluxes in eastern boundary upwelling systems, _Biogeosciences_, 16, 329–346, DOI: [10.5194/bg-16-329-2019](https://www.biogeosciences.net/16/329/2019/). [[PDF]](/papers/Brady2019a.pdf) [[Supplemental]](/papers/Brady2019aSupplemental.pdf)
 
 `2017`
 __Brady, RX__,  MA  Alexander,  NS  Lovenduski,  and  RR  Rykaczewski  (2017),  Emergent anthropogenic trends in California Current upwelling, _Geophys. Res. Lett._, 44, 5044–5052, DOI: [10.1002/2017GL072945](https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2017GL072945). [[PDF]](/papers/Brady2017.pdf) [[Supplemental]](/papers/Brady2017Supplemental.pdf) [[Press Release]](https://eos.org/research-spotlights/how-will-climate-change-affect-the-california-current-upwelling)
@@ -119,7 +119,7 @@ __Brady, RX__ and RR Rykaczewski, Ocean ecosystems in 2100. *SC Honors College S
 * NCL (familiar)
 * R (familiar)
 
-### Other Tools 
+### Other Tools
 * ParaView
 * GNU Parallel
 * git
@@ -224,19 +224,22 @@ Runner-up, NASA Data Visualization and Storytelling Competition, American Geophy
 ## Service
 
 ### Mentorship
+`2021`
+Goldwater Scholarship Mentor, Matthew Duggan (University of South Carolina)
+
 `2020`
 Programming Mentor, Isis Díaz (SMART; University of Puerto Rico)
 
-`2019` 
+`2019`
 Programming Mentor, Holly Olivarez (SOARS; University of New Mexico)
 
-Programming Mentor, David Feagins (SMART; St. Mary's University) 
+Programming Mentor, David Feagins (SMART; St. Mary's University)
 
 Programming Mentor, Gabriela Cazares (SOARS; MIT)
 
 Programming Mentor, Brianna Green (RESESS; New Mexico Tech)
 
-`2017` 
+`2017`
 Programming Mentor, Gabriela Negrete-Garcia (SOARS; University of Wisconsin--Madison)
 
 ### Miscellaneous
@@ -325,6 +328,9 @@ _Southern Ocean Carbon Hotspots in E3SM_. Climate, Ocean, and Sea Ice Modeling (
 _Emergence of Anthropogenic Trends in California Current Upwelling in the Presence of Natural Climate Variability_.  NCAR Oceanography Section. (Boulder, CO)
 
 ### Conference Talks
+`2021`
+_Lagrangian trajectories of carbon in the topographically influenced Southern Ocean_. 2021 SOCCOM Annual Meeting. (remote)
+
 `2020`
 _Lagrangian circulation of carbon from the Southern Ocean abyss_. Department of Energy Computational Science Graduate Fellowship Annual Review. (remote)
 
@@ -358,7 +364,7 @@ _Skillful multiyear predictions of ocean acidification in the California Current
 _Skillful multiyear predictions of ocean acidification in the California Current System_. CLIVAR Large Ensembles Workshop. (Boulder, CO)
 
 `2018`
-_On the role of climate modes in modulating the air-sea CO2 fluxes in Eastern Boundary Upwelling Systems_. Synthesis and intercomparison of ocean carbon uptake in CMIP6 models. (Washington, DC) 
+_On the role of climate modes in modulating the air-sea CO2 fluxes in Eastern Boundary Upwelling Systems_. Synthesis and intercomparison of ocean carbon uptake in CMIP6 models. (Washington, DC)
 
 `2017`
 _CO2 flux variability in Eastern Boundary Upwelling Systems_. 10th International Carbon Dioxide Conference.  (Interlaken, Switzerland)
@@ -380,7 +386,7 @@ _Effective Use of Color in Climate Science Visualizations_. ATOC Graduate Studen
 
 _Introduction to Git Version Control_. ATOC Graduate Student Forum. (Boulder, CO)
 
-## Short Courses 
+## Short Courses
 
 `2019`
 CMIP6 Hackathon, National Center for Atmospheric Research (Boulder, CO)
@@ -422,4 +428,4 @@ NMFS Marine Resources Population Dynamics Workshop (Layton, FL)
 
 <br>
 
-<center> Last updated: March 2021 </center>
+<center> Last updated: June 2021 </center>

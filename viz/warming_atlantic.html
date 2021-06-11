@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>Riley X. Brady | Riley X. Brady</title>
+<title>Riley X. Brady | Warming Atlantic</title>
 <meta name="description" content="The personal/academic page for Riley Brady.">
 
 <!-- Bootstrap & MDB -->
@@ -22,15 +22,15 @@
 <link rel="shortcut icon" href="/assets/img/favicon.ico">
 <link rel="stylesheet" href="/assets/css/main.css">
 
-<link rel="canonical" href="/blog/">
+<link rel="canonical" href="/viz/warming_atlantic">
 
 <!-- Open Graph -->
 
 <meta property="og:site_name" content="The personal/academic page for Riley Brady." />
 <meta property="og:type" content="object" />
 <meta property="og:title" content="" />
-<meta property="og:url" content="https://bradyrx.github.io/blog/index.html" />
-<meta property="og:description" content="Riley X. Brady" />
+<meta property="og:url" content="https://bradyrx.github.io/viz/warming_atlantic" />
+<meta property="og:description" content="Warming Atlantic" />
 <meta property="og:image" content="/assets/img/viz/southern_ocean_carbon/thumb.jpg" />
 
 
@@ -72,7 +72,7 @@
           </li>
           
           <!-- Blog -->
-          <li class="nav-item active">
+          <li class="nav-item ">
             <a class="nav-link" href="/blog/">
               blog
               
@@ -148,24 +148,40 @@
     <div class="container mt-5">
       <div class="post">
 
-  <div class="header-bar">
-    <h1>coding and climate</h1>
-    <h2>my musings on programming and the Earth system</h2>
-  </div>
-
-
-  <ul class="post-list">
+  <header class="post-header">
     
-      <li>
-        <h3><a class="post-title" href="/blog/2018/flexible-python-inputs/">Flexible python scripts from the command line</a></h3>
-        <p class="post-meta">June 24, 2018</p>
-        <p>A tutorial for creating python scripts for data analysis that allow various inputs from the command line to make them more flexible.</p>
-      </li>
+      <h1 class="post-title"><center>Warming Atlantic</center></h1>
     
-  </ul>
+    <p class="post-description"></p>
+  </header>
 
-  
+  <article>
+    <table>
+    <thead>
+    <th><center>Tools</center></th>
+    </thead>
+    
+    <tfoot>
+    <td colspan="1">
+    </td>
+    </tfoot>
+    
+    <tbody>
+    <td><center>python, xarray, matplotlib, cartopy</center></td>
+    </tbody>
+</table>
 
+<p>I really love the “<a href="https://www.displayr.com/what-are-small-multiples/">small multiples</a>” approach in data visualization. I’ve also heard them called “postage stamp” plots. The idea is that you organize the same style of plot into a row-column format with some sort of change in each subplot. In climate science, it’s most commonly used to illustrate change over time.</p>
+
+<p>Here, I show the change in Atlantic Ocean sea surface temperatures from 1900 to 2017, relative to the 1890-1920 mean. Redder colors indicate warmer temperatures. You might notice in the later years a “<a href="https://en.wikipedia.org/wiki/Cold_blob_(North_Atlantic)">cold blob</a>” in the northern Atlantic near Greenland. This is an expected signal of anthropogenic climate change that could be due to the slowdown of the Atlantic Meridional Overturning Circulation (AMOC) and the injection of glacial meltwater, among other factors.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/viz/warming_atlantic/atlantic_small_multiples.jpg" alt="" />
+    </div>
+</div>
+
+  </article>
 
 </div>
 

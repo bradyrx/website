@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>Riley X. Brady | Riley X. Brady</title>
+<title>Riley X. Brady | NPZD Model</title>
 <meta name="description" content="The personal/academic page for Riley Brady.">
 
 <!-- Bootstrap & MDB -->
@@ -22,15 +22,15 @@
 <link rel="shortcut icon" href="/assets/img/favicon.ico">
 <link rel="stylesheet" href="/assets/css/main.css">
 
-<link rel="canonical" href="/blog/">
+<link rel="canonical" href="/viz/npzd_model">
 
 <!-- Open Graph -->
 
 <meta property="og:site_name" content="The personal/academic page for Riley Brady." />
 <meta property="og:type" content="object" />
 <meta property="og:title" content="" />
-<meta property="og:url" content="https://bradyrx.github.io/blog/index.html" />
-<meta property="og:description" content="Riley X. Brady" />
+<meta property="og:url" content="https://bradyrx.github.io/viz/npzd_model" />
+<meta property="og:description" content="NPZD Model" />
 <meta property="og:image" content="/assets/img/viz/southern_ocean_carbon/thumb.jpg" />
 
 
@@ -72,7 +72,7 @@
           </li>
           
           <!-- Blog -->
-          <li class="nav-item active">
+          <li class="nav-item ">
             <a class="nav-link" href="/blog/">
               blog
               
@@ -148,24 +148,43 @@
     <div class="container mt-5">
       <div class="post">
 
-  <div class="header-bar">
-    <h1>coding and climate</h1>
-    <h2>my musings on programming and the Earth system</h2>
-  </div>
-
-
-  <ul class="post-list">
+  <header class="post-header">
     
-      <li>
-        <h3><a class="post-title" href="/blog/2018/flexible-python-inputs/">Flexible python scripts from the command line</a></h3>
-        <p class="post-meta">June 24, 2018</p>
-        <p>A tutorial for creating python scripts for data analysis that allow various inputs from the command line to make them more flexible.</p>
-      </li>
+      <h1 class="post-title"><center>NPZD Model</center></h1>
     
-  </ul>
+    <p class="post-description"></p>
+  </header>
 
-  
+  <article>
+    <table>
+    <thead>
+    <th><center>Tools</center></th>
+    </thead>
+    
+    <tfoot>
+    <td colspan="1">
+    </td>
+    </tfoot>
+    
+    <tbody>
+    <td><center>python, javascript, bokeh, numpy</center></td>
+    </tbody>
+</table>
 
+<p>One of the simplest ecosystem models one can make for an ocean model is a (N)utrient-(P)hytoplankton-(Z)ooplankton-(D)etritus model. It gets coupled to the ocean model physics to respond to things like solubility (temperature) changes, mixing, and upwelling.</p>
+
+<p>I wanted to make an interactive version of an NPZD model from an assignment in my Biogeochemical Oceanography class, based on the great <a href="https://press.princeton.edu/books/hardcover/9780691017075/ocean-biogeochemical-dynamics">Sarmiento &amp; Gruber textbook</a>. Here I used <code class="language-plaintext highlighter-rouge">bokeh</code>, a package for making interactive python visualizations. You can move the sliders to play around with initial conditions and other parameters in the model.</p>
+
+<p>This is a simple one-box model, so the generalized nutrient (which could be thought of as nitrate) is conserved. The top panel shows how the nutrient, phytoplankton, zooplankton, and detritus (zooplankton poop and dead phytoplankton) populations change over time. The bottom panel shows this in a different view, highlighting that the total nutrient is conserved.</p>
+
+<p>The extended description and code can be found in my Jupyter notebook <a href="http://nbviewer.jupyter.org/github/bradyrx/Public-Notebooks/blob/master/NPZD-Model.ipynb">here.</a> You can view the full HTML page <a href="/assets/html/npzd_model.html">here</a>, if the inset on this page is difficult to navigate on your device.</p>
+
+<div>
+<iframe src="/assets/html/npzd_model.html" width="100%" height="720">
+</iframe>
+</div>
+
+  </article>
 
 </div>
 

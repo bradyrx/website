@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>Riley X. Brady | Riley X. Brady</title>
+<title>Riley X. Brady | software</title>
 <meta name="description" content="The personal/academic page for Riley Brady.">
 
 <!-- Bootstrap & MDB -->
@@ -22,15 +22,15 @@
 <link rel="shortcut icon" href="/assets/img/favicon.ico">
 <link rel="stylesheet" href="/assets/css/main.css">
 
-<link rel="canonical" href="/blog/">
+<link rel="canonical" href="/software/">
 
 <!-- Open Graph -->
 
 <meta property="og:site_name" content="The personal/academic page for Riley Brady." />
 <meta property="og:type" content="object" />
 <meta property="og:title" content="" />
-<meta property="og:url" content="https://bradyrx.github.io/blog/index.html" />
-<meta property="og:description" content="Riley X. Brady" />
+<meta property="og:url" content="https://bradyrx.github.io/software/" />
+<meta property="og:description" content="software" />
 <meta property="og:image" content="/assets/img/viz/southern_ocean_carbon/thumb.jpg" />
 
 
@@ -72,7 +72,7 @@
           </li>
           
           <!-- Blog -->
-          <li class="nav-item active">
+          <li class="nav-item ">
             <a class="nav-link" href="/blog/">
               blog
               
@@ -118,9 +118,11 @@
           
           
           
-          <li class="nav-item ">
+          <li class="nav-item active">
               <a class="nav-link" href="/software/">
                 software
+                
+                <span class="sr-only">(current)</span>
                 
               </a>
           </li>
@@ -148,24 +150,181 @@
     <div class="container mt-5">
       <div class="post">
 
-  <div class="header-bar">
-    <h1>coding and climate</h1>
-    <h2>my musings on programming and the Earth system</h2>
-  </div>
-
-
-  <ul class="post-list">
+  <header class="post-header">
     
-      <li>
-        <h3><a class="post-title" href="/blog/2018/flexible-python-inputs/">Flexible python scripts from the command line</a></h3>
-        <p class="post-meta">June 24, 2018</p>
-        <p>A tutorial for creating python scripts for data analysis that allow various inputs from the command line to make them more flexible.</p>
-      </li>
+    <h1 class="post-title">software</h1>
     
-  </ul>
+    <p class="post-description">open-source contributions</p>
+  </header>
 
-  
+  <article>
+    <style>
+p {
+    padding-bottom: 1.5cm;
+}
+</style>
 
+<p>My primary data analysis tool is the wonderful open-source language, python. There has been a recent push in the Geoscience community toward the language, since domain-specific packages can be developed fully open-source and the language supports out-of-memory computation with <a href="https://dask.org/">dask</a> and easy analysis over labelled arrays with <a href="http://xarray.pydata.org/">xarray</a>. I collaborate with developers primarily through the <a href="http://pangeo.io/collaborators.html">pangeo</a> project.</p>
+
+<h2 id="core-developer">core developer</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><center><img src="/assets/img/software/climpred-logo.png" style="width: 300px;"></center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><center>co-founding author and core developer</center></td>
+    </tr>
+    <tr>
+      <td><center>
+<img class="emoji" title=":earth_americas:" alt=":earth_americas:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f30e.png" height="20" width="20">  an xarray wrapper for analysis of ensemble forecast models for climate prediction  <img class="emoji" title=":earth_americas:" alt=":earth_americas:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f30e.png" height="20" width="20">
+</center></td>
+    </tr>
+    <tr>
+      <td><center>documentation and installation <a href="https://climpred.readthedocs.io">here</a> </center></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><center><img src="/assets/img/software/esmtools.png" style="width: 300px;"></center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><center>founding author and core developer</center></td>
+    </tr>
+    <tr>
+      <td><center>
+<img class="emoji" title=":octopus:" alt=":octopus:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f419.png" height="20" width="20">  a toolbox for Earth System Model analysis  <img class="emoji" title=":octopus:" alt=":octopus:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f419.png" height="20" width="20">
+</center></td>
+    </tr>
+    <tr>
+      <td><center>documentation and installation <a href="https://esmtools.readthedocs.io">here</a> </center></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><center><font size="28px">xskillscore</font></center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><center>core developer/maintainer</center></td>
+    </tr>
+    <tr>
+      <td><center>xarray wrapper for metrics for verifying forecasts</center></td>
+    </tr>
+    <tr>
+      <td><center>
+<a href="https://github.com/raybellwaves/xskillscore/graphs/contributors">added</a> area-weighting and skipna to all functions</center></td>
+    </tr>
+    <tr>
+      <td><center>documentation and installation <a href="https://github.com/raybellwaves/xskillscore">here</a> </center></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+</p>
+
+<h2 id="contributor">contributor</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><center><font size="28px">esmlab</font></center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><center>contributing author</center></td>
+    </tr>
+    <tr>
+      <td><center>NCAR package of tools for working with Earth system multi-model analyses with xarray</center></td>
+    </tr>
+    <tr>
+      <td><center>
+<a href="https://github.com/NCAR/esmlab/graphs/contributors">added</a> significance testing for statistics</center></td>
+    </tr>
+    <tr>
+      <td><center>documentation and installation <a href="https://esmlab.readthedocs.io/en/latest/">here</a> </center></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><center><font size="5px">Lagrangian, In Situ, Global, High-Performance Particle Tracking (LIGHT)</font></center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><center>contributing author</center></td>
+    </tr>
+    <tr>
+      <td><center>an online Lagrangian particle tracking system for the MPAS–O ocean model</center></td>
+    </tr>
+    <tr>
+      <td><center>
+<a href="/viz/southern_ocean_carbon/">Added biogeochemical "sensors"</a> so the floats can record the time history of carbon, nutrients, and oxygen</center></td>
+    </tr>
+    <tr>
+      <td><center>description of LIGHT <a href="https://pwolfram.github.io/light/">here</a> </center></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><center>MPAS-Analysis <br> <img src="/assets/img/software/mpas-analysis.png" style="width: 250px;">
+</center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><center>contributing author</center></td>
+    </tr>
+    <tr>
+      <td><center>provides analysis for the Model for Prediction Across Scales (MPAS) components of ACME</center></td>
+    </tr>
+    <tr>
+      <td><center>
+<a href="https://github.com/MPAS-Dev/MPAS-Analysis/graphs/contributors">added</a> support for ocean biogeochemistry</center></td>
+    </tr>
+    <tr>
+      <td><center>documentation and installation <a href="https://mpas-dev.github.io/MPAS-Analysis/stable/">here</a> </center></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+</p>
+
+
+  </article>
 
 </div>
 
@@ -176,7 +335,7 @@
     
 <footer class="fixed-bottom">
   <div class="container mt-0">
-    &copy; Copyright 2021 Riley X. Brady.
+    © Copyright 2021 Riley X. Brady.
     Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and based on the <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 
     

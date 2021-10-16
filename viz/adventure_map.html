@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>Riley X. Brady | Riley X. Brady</title>
+<title>Riley X. Brady | Adventure Map</title>
 <meta name="description" content="The personal/academic page for Riley Brady.">
 
 <!-- Bootstrap & MDB -->
@@ -22,15 +22,15 @@
 <link rel="shortcut icon" href="/assets/img/favicon.ico">
 <link rel="stylesheet" href="/assets/css/main.css">
 
-<link rel="canonical" href="/blog/">
+<link rel="canonical" href="/viz/adventure_map">
 
 <!-- Open Graph -->
 
 <meta property="og:site_name" content="The personal/academic page for Riley Brady." />
 <meta property="og:type" content="object" />
 <meta property="og:title" content="" />
-<meta property="og:url" content="https://bradyrx.github.io/blog/index.html" />
-<meta property="og:description" content="Riley X. Brady" />
+<meta property="og:url" content="https://bradyrx.github.io/viz/adventure_map" />
+<meta property="og:description" content="Adventure Map" />
 <meta property="og:image" content="/assets/img/viz/southern_ocean_carbon/thumb.jpg" />
 
 
@@ -72,7 +72,7 @@
           </li>
           
           <!-- Blog -->
-          <li class="nav-item active">
+          <li class="nav-item ">
             <a class="nav-link" href="/blog/">
               blog
               
@@ -148,24 +148,43 @@
     <div class="container mt-5">
       <div class="post">
 
-  <div class="header-bar">
-    <h1>coding and climate</h1>
-    <h2>my musings on programming and the Earth system</h2>
-  </div>
-
-
-  <ul class="post-list">
+  <header class="post-header">
     
-      <li>
-        <h3><a class="post-title" href="/blog/2018/flexible-python-inputs/">Flexible python scripts from the command line</a></h3>
-        <p class="post-meta">June 24, 2018</p>
-        <p>A tutorial for creating python scripts for data analysis that allow various inputs from the command line to make them more flexible.</p>
-      </li>
+      <h1 class="post-title"><center>Adventure Map</center></h1>
     
-  </ul>
+    <p class="post-description"></p>
+  </header>
 
-  
+  <article>
+    <table>
+    <thead>
+    <th><center>Tools</center></th>
+    </thead>
+    
+    <tfoot>
+    <td colspan="1">
+    </td>
+    </tfoot>
+    
+    <tbody>
+    <td><center>python, gpxpy, mplleaflet</center></td>
+    </tbody>
+</table>
 
+<p>I use a Garmin Forerunner GPS watch when running, hiking, and cycling. I started using it while running to track my mileage through <a href="https://www.strava.com/athletes/17249172">Strava</a>, but then realized I could manually view and manipulate the GPX files.</p>
+
+<p>For one, I could tweak the GPX files to make myself look faster. But I decided to spend my time making an interactive map of all the places the watch has tracked me working out and exploring. This can be construced pretty easily with the python packages <code class="language-plaintext highlighter-rouge">gpxpy</code> and <code class="language-plaintext highlighter-rouge">mplleaflet</code>. You can check out the code <a href="https://github.com/bradyrx/run_and_ride_map/blob/master/gpx_play.ipynb">here</a>.</p>
+
+<p>You’ll notice various coloring of the lines on the map. <font color="red">Red</font> denotes running, <font color="purple">purple</font> cycling, and <font color="brown">brown</font> hiking. Note that this map is a few years out of date. Strava changed the way they archive your files, so I haven’t been able to get access again to the raw GPX files.</p>
+
+<p>You can view the full map in your browser <a href="/assets/html/adventure_map.html">here</a>.</p>
+
+<div>
+<iframe src="/assets/html/adventure_map.html" width="100%" height="720">
+</iframe>
+</div>
+
+  </article>
 
 </div>
 

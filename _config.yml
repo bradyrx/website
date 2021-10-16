@@ -11,7 +11,7 @@ footer_text: >
 
 url: https://bradyrx.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/
-last_updated: June 2021 # set to true if you want to display last updated in the footer
+last_updated: October 2021 # set to true if you want to display last updated in the footer
 
 # -----------------------------------------------------------------------------
 # Layout

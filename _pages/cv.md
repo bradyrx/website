@@ -62,6 +62,8 @@ __UNC Institute of Marine Sciences__ NSF REU Scholar, Coastal Fisheries Ecology 
 ## Publications
 
 ### Peer-Reviewed
+`2021` __Brady, RX__, ME Maltrud, PJ Wolfram, HF Drake, and NS Lovenduski (2021), The influence of ocean topography on the upwelling of carbon in the Southern Ocean, _Geophysical Research Letters_, 48. [[PDF]](/papers/Brady2021a.pdf) [[Online]](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021GL095088)
+
 `2021` __Brady, RX__ and A Spring (2021), climpred: Verification of weather and climate forecasts, _Journal of Open Source Software_, 6 (59), 2781. [[PDF]](/papers/Brady2021b.pdf) [[Online]](https://joss.theoj.org/papers/10.21105/joss.02781)
 
 `2020`Schlunegger, S, Y Eddebbar, __RX Brady__, and FA Burger (2020), Applications of Large Ensembles for marine biogeochemistry, _US CLIVAR Variations_, 18 (2). [[PDF]](/papers/Schlunegger2020.pdf) [[Online]](https://indd.adobe.com/view/20699135-35f6-4eaf-b85e-77553c2d0a4e)
